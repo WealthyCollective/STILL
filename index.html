@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Still — Advanced Longevity. On Demand.</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 80 210 310'%3E%3Crect width='210' height='310' x='0' y='80' fill='%23172838'/%3E%3Cpath fill='%23F5F9FD' d='M198.03,365.18c-29.58,26.02-72.8,29.66-109.85,22.88-13.51-2.47-25.89-6.88-37.99-13.09-28.68-16.62-44.46-41.48-43.86-75.69h46.94c1.37.04,2.62,4.6,1.82,5.3-1.4,25.1,7.19,50.23,30.57,62.02,10.7,5.4,22.39,6.85,34.49,6.9,31.69.13,61.74-17.05,61.02-52.17-.37-17.94-8.66-33.17-23.09-43.78-32.4-23.81-60.57-25.01-94.84-43.25-11.56-6.15-22.48-13.04-31.34-22.51-15.62-16.69-20.59-37.99-17.68-60.36,2.31-17.75,12.59-32.8,26.56-43.73,24.66-19.29,57.16-23.69,87.63-20.54,41.79,4.33,81.31,28.41,85.02,73.32.11,1.29.23,3.48.22,4.61s-3.18,1.7-4.49,1.69l-43.57-.06c-1.29-15.71,1.01-26-7.37-40.76-5-8.81-12.29-15.46-22.14-18.66-17.67-5.74-37.1-5.36-54.13,1.71-18.99,7.89-29.67,25.14-28.43,45.3,1.63,26.46,18.24,40.42,41.15,50.61,12.85,5.72,25.54,10.46,38.85,15.12,22.89,8.02,48.59,19.65,66.54,35.86,32.62,29.46,29.66,81.42-2.03,109.29Z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -484,13 +485,9 @@ body.portal-open .site-footer{display:none!important}
 .inv-footer-strip{background:var(--c1);border-top:1px solid rgba(255,255,255,.06);padding:18px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
 
-
 .stripe-error.show{display:block}
-
 .stripe-success.show{display:flex}
-
 .stripe-success-icon svg{width:20px;height:20px;fill:none;stroke:#3A7A50;stroke-width:2}
-
 
 /* ═══════════════════════════════════
    RESPONSIVE
@@ -688,12 +685,7 @@ body.portal-open .site-footer{display:none!important}
   .inv-footer-strip{padding:16px;flex-direction:column;text-align:center}
 
   /* stripe */
-  
-  
-  
-  
-  
-}
+          }
 
 @media(max-width:380px){
   .t-h1{font-size:30px}
@@ -1338,7 +1330,6 @@ body.portal-open .site-footer{display:none!important}
 </div>
 
 <script>
-// ── PAGE SWITCHING ──────────────────────────────────────────
 function showPage(id) {
   ['exp','partners','landlord'].forEach(function(p) {
     var el = document.getElementById('page-' + p);
@@ -1351,7 +1342,6 @@ function showPage(id) {
 }
 function switchPage(el) { showPage(el.dataset.page); }
 
-// ── BILLING TOGGLE ──────────────────────────────────────────
 var billing = 'monthly';
 function setBilling(period) {
   billing = period;
@@ -1363,7 +1353,7 @@ function setBilling(period) {
     document.getElementById('accessSaving').textContent = '~£6.60 a day — less than your coffee';
     document.getElementById('chromePrice').innerHTML = '£499<sup style="font-size:16px;color:var(--c3)">/mo</sup>';
     document.getElementById('chromeNote').textContent = 'Unlimited · Billed monthly · Cancel anytime';
-    document.getElementById('chromeSaving').textContent = 'Clinic sessions cost 10–20× more per visit';
+    document.getElementById('chromeSaving').textContent = 'Clinic sessions cost 10–20x more per visit';
   } else {
     document.getElementById('accessPrice').innerHTML = '£1,910<sup style="font-size:14px;color:var(--c3)">/yr</sup>';
     document.getElementById('accessNote').textContent = 'Billed annually · £159/mo equivalent';
@@ -1374,7 +1364,6 @@ function setBilling(period) {
   }
 }
 
-// ── SCENARIO TABS ───────────────────────────────────────────
 function switchScenario(el) {
   document.querySelectorAll('.sc-tab').forEach(function(t){t.classList.remove('active');});
   document.querySelectorAll('.sc-panel').forEach(function(p){p.classList.remove('active');});
@@ -1382,9 +1371,7 @@ function switchScenario(el) {
   document.getElementById('sc-' + el.dataset.sc).classList.add('active');
 }
 
-// ── INVESTOR PORTAL ─────────────────────────────────────────
 var INV_HASH = '742cc609cce965aa4620e5d9959c35cd4d1b64159f92677a8012add86e05966c';
-
 function openInvestorLogin() {
   document.getElementById('invOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -1421,7 +1408,6 @@ function closeInvestorPortal() {
   showPage('exp');
 }
 
-// ── ANCHOR LINKS ─────────────────────────────────────────────
 document.addEventListener('click', function(e) {
   var a = e.target.closest('a[href^="#"]');
   if (!a) return;
@@ -1431,7 +1417,6 @@ document.addEventListener('click', function(e) {
   t.scrollIntoView({behavior:'smooth',block:'start'});
 });
 
-// ── GLOBAL SCOPE ─────────────────────────────────────────────
 window.showPage = showPage;
 window.switchPage = switchPage;
 window.setBilling = setBilling;

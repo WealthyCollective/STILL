@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<script src="https://js.stripe.com/v3/"></script>
+
 <style>
 /* ─── RESET ─── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -483,46 +483,14 @@ body.portal-open .site-footer{display:none!important}
 .inv-term-v{font-size:12px;color:#F5F9FD;text-align:right}
 .inv-footer-strip{background:var(--c1);border-top:1px solid rgba(255,255,255,.06);padding:18px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
-/* ═══════════════════════════════════
-   STRIPE MODAL
-═══════════════════════════════════ */
-.stripe-overlay{display:none;position:fixed;inset:0;z-index:600;background:rgba(23,40,56,.72);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:16px}
-.stripe-overlay.open{display:flex}
-.stripe-modal{background:var(--cw);width:100%;max-width:440px}
-.stripe-head{background:var(--c1);padding:22px 26px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
-.stripe-head-plan{font-size:8.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,249,253,.32);margin-bottom:5px}
-.stripe-head-title{font-family:var(--serif);font-size:20px;font-weight:300;color:#F5F9FD}
-.stripe-head-price{font-family:var(--serif);font-size:26px;font-weight:300;color:var(--c5);margin-top:2px}
-.stripe-head-note{font-size:9.5px;color:rgba(245,249,253,.3);margin-top:3px}
-.stripe-close-btn{background:rgba(255,255,255,.08);border:none;cursor:pointer;color:rgba(245,249,253,.5);width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;transition:background .15s}
-.stripe-close-btn:hover{background:rgba(255,255,255,.16);color:#F5F9FD}
-.stripe-body{padding:22px 26px}
-.stripe-billing-toggle{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:16px}
-.stripe-billing-btn{font-size:8.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:11px 8px;border:1px solid var(--bdr);cursor:pointer;background:var(--c6);color:var(--c2);transition:all .15s;text-align:center;display:flex;align-items:center;justify-content:center;gap:6px}
-.stripe-billing-btn.active{background:var(--c1);color:#F5F9FD;border-color:var(--c1)}
-.stripe-field-group{margin-bottom:13px}
-.stripe-label{display:block;font-size:8.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--c2);margin-bottom:6px}
-.stripe-input{width:100%;border:1px solid var(--bdr);background:var(--c6);padding:10px 13px;font-family:var(--sans);font-size:13px;color:var(--c1);outline:none;transition:border-color .15s;border-radius:0}
-.stripe-input:focus{border-color:var(--c3)}
-.stripe-card-el{border:1px solid var(--bdr);background:var(--c6);padding:10px 13px;transition:border-color .15s}
-.stripe-card-el.focused{border-color:var(--c3)}
-.stripe-divider{height:1px;background:var(--bdr);margin:14px 0}
-.stripe-secure{display:flex;align-items:center;gap:7px;font-size:9.5px;color:var(--c3);margin-bottom:14px}
-.stripe-secure svg{width:11px;height:11px;fill:none;stroke:var(--c3);stroke-width:2;flex-shrink:0}
-.stripe-submit{width:100%;background:var(--c1);color:#F5F9FD;border:none;cursor:pointer;padding:13px;font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;transition:background .15s;display:flex;align-items:center;justify-content:center;gap:10px;min-height:44px}
-.stripe-submit:hover:not(:disabled){background:var(--c2)}
-.stripe-submit:disabled{opacity:.5;cursor:not-allowed}
-.spinner{width:14px;height:14px;border:2px solid rgba(245,249,253,.3);border-top-color:#F5F9FD;border-radius:50%;animation:spin .7s linear infinite;display:none}
-.stripe-submit.loading .spinner{display:block}
-.stripe-submit.loading .btn-text{display:none}
-@keyframes spin{to{transform:rotate(360deg)}}
-.stripe-error{background:#FEF2F2;border:1px solid #FCA5A5;padding:10px 13px;font-size:12px;color:#B91C1C;margin-top:10px;display:none;line-height:1.5}
+
+
 .stripe-error.show{display:block}
-.stripe-success{padding:32px 26px;text-align:center;display:none;flex-direction:column;align-items:center;gap:12px}
+
 .stripe-success.show{display:flex}
-.stripe-success-icon{width:48px;height:48px;border-radius:50%;background:rgba(74,160,100,.12);border:1px solid rgba(74,160,100,.3);display:flex;align-items:center;justify-content:center}
+
 .stripe-success-icon svg{width:20px;height:20px;fill:none;stroke:#3A7A50;stroke-width:2}
-.stripe-note{font-size:10px;color:var(--c3);line-height:1.6}
+
 
 /* ═══════════════════════════════════
    RESPONSIVE
@@ -720,11 +688,11 @@ body.portal-open .site-footer{display:none!important}
   .inv-footer-strip{padding:16px;flex-direction:column;text-align:center}
 
   /* stripe */
-  .stripe-overlay{padding:8px}
-  .stripe-modal{max-width:100%}
-  .stripe-head{padding:18px 20px}
-  .stripe-body{padding:18px 20px}
-  .stripe-billing-btn{font-size:8px;padding:10px 6px}
+  
+  
+  
+  
+  
 }
 
 @media(max-width:380px){
@@ -1198,10 +1166,10 @@ body.portal-open .site-footer{display:none!important}
       <div>
         <p class="t-body inv" style="margin-bottom:22px">We work with a curated selection of venue partners across the UK and Dubai. If your space is well-located and your audience is health-minded — we'd like to hear from you.</p>
         <div class="l-cta-links">
-          <a href="/cdn-cgi/l/email-protection#234b464f4f4c6350574a4f4f0d4f4c4d474c4d"><span class="__cf_email__" data-cfemail="4028252c2c2f003334292c2c6e2c2f2e242f2e">[email&#160;protected]</span></a>
+          <a href="mailto:hello@still.london">hello@still.london</a>
         </div>
         <div class="cta-btns">
-          <a href="/cdn-cgi/l/email-protection#84ece1e8e8ebc4f7f0ede8e8aae8ebeae0ebea" class="btn btn-light">Start the Conversation</a>
+          <a href="mailto:hello@still.london" class="btn btn-light">Start the Conversation</a>
           <button class="btn btn-ghost-inv" onclick="showPage('partners')">Partner Info</button>
         </div>
       </div>
@@ -1226,10 +1194,10 @@ body.portal-open .site-footer{display:none!important}
     <li><a href="javascript:void(0)" onclick="showPage('exp')">Experience</a></li>
     <li><a href="javascript:void(0)" onclick="showPage('partners')">Partners</a></li>
     <li><a href="javascript:void(0)" onclick="showPage('landlord')">Landlord</a></li>
-    <li><a href="/cdn-cgi/l/email-protection#c2aaa7aeaead82b1b6abaeaeecaeadaca6adac">Contact</a></li>
+    <li><a href="mailto:hello@still.london">Contact</a></li>
     <li><a href="javascript:void(0)" onclick="openInvestorLogin()" style="color:rgba(245,249,253,.1)">IR</a></li>
   </ul>
-  <div class="site-footer-copy">An UNTIL Company · © 2025 Still · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7e161b1212113e0d0a171212501211101a1110">[email&#160;protected]</a></div>
+  <div class="site-footer-copy">An UNTIL Company · © 2025 Still · hello@still.london</div>
 </footer>
 
 <!-- ═══════════════════════════════════
@@ -1241,7 +1209,7 @@ body.portal-open .site-footer{display:none!important}
     <div class="inv-modal-body">
       <p class="t-small" style="margin-bottom:16px">Confidential financial information for authorised investors and prospective investors. Enter your access code to continue.</p>
       <div class="form-group"><label class="form-label">Access Code</label><input type="password" class="form-input" id="invPwd" placeholder="Enter access code" onkeydown="if(event.key==='Enter')checkInvPwd()" style="letter-spacing:.18em"></div>
-      <div class="inv-err" id="invErr">Incorrect code. Contact <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c0b2a480a8b5ada1aea9b4b9eda3a1b0a9b4a1aceea3afad">[email&#160;protected]</a></div>
+      <div class="inv-err" id="invErr">Incorrect code. Contact rd@humanity-capital.com</div>
       <div style="display:flex;gap:8px;margin-top:4px">
         <button onclick="checkInvPwd()" class="btn btn-dark" style="flex:1">Access Portal</button>
         <button onclick="closeInvestorLogin()" class="btn btn-outline">Cancel</button>
@@ -1349,7 +1317,7 @@ body.portal-open .site-footer{display:none!important}
 
   <div class="inv-cta-section inv">
     <div class="inv-cta-inner">
-      <div><h2 class="t-h2 inv" style="margin-bottom:16px">Request the full <span class="em">information memorandum.</span></h2><p class="t-body inv" style="margin-bottom:22px">Full financial model, cap table, term sheet, and site pipeline available under NDA. Series Seed — target close Q3 2025.</p><div style="display:flex;flex-direction:column;gap:4px;margin-bottom:22px"><a href="/cdn-cgi/l/email-protection#8fe7eae3e3e0cffcfbe6e3e3a1e3e0e1ebe0e1" style="font-family:var(--serif);font-size:19px;font-weight:300;color:#F5F9FD;text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--c3)'" onmouseout="this.style.color='#F5F9FD'"><span class="__cf_email__" data-cfemail="1d75787171725d6e6974717133717273797273">[email&#160;protected]</span></a><a href="tel:+447808889888" style="font-family:var(--serif);font-size:19px;font-weight:300;color:#F5F9FD;text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--c3)'" onmouseout="this.style.color='#F5F9FD'">+44 780 888 9 888</a></div><div style="display:flex;gap:8px;flex-wrap:wrap"><a href="/cdn-cgi/l/email-protection#4f272a2323200f3c3b262323612320212b2021" class="btn btn-light">Request the IM</a><button onclick="closeInvestorPortal()" class="btn btn-ghost-inv">Back to Site</button></div></div>
+      <div><h2 class="t-h2 inv" style="margin-bottom:16px">Request the full <span class="em">information memorandum.</span></h2><p class="t-body inv" style="margin-bottom:22px">Full financial model, cap table, term sheet, and site pipeline available under NDA. Series Seed — target close Q3 2025.</p><div style="display:flex;flex-direction:column;gap:4px;margin-bottom:22px"><a href="mailto:hello@still.london" style="font-family:var(--serif);font-size:19px;font-weight:300;color:#F5F9FD;text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--c3)'" onmouseout="this.style.color='#F5F9FD'">hello@still.london</a><a href="tel:+447808889888" style="font-family:var(--serif);font-size:19px;font-weight:300;color:#F5F9FD;text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--c3)'" onmouseout="this.style.color='#F5F9FD'">+44 780 888 9 888</a></div><div style="display:flex;gap:8px;flex-wrap:wrap"><a href="mailto:hello@still.london" class="btn btn-light">Request the IM</a><button onclick="closeInvestorPortal()" class="btn btn-ghost-inv">Back to Site</button></div></div>
       <div><div class="inv-terms-box"><div style="font-size:8.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,249,253,.3);margin-bottom:14px">Key Terms · Indicative</div><div class="inv-term-row"><span class="inv-term-k">Round size</span><span class="inv-term-v">£2–5M</span></div><div class="inv-term-row"><span class="inv-term-k">Stage</span><span class="inv-term-v">Series Seed</span></div><div class="inv-term-row"><span class="inv-term-k">Target close</span><span class="inv-term-v">Q3 2025</span></div><div class="inv-term-row"><span class="inv-term-k">Use of funds</span><span class="inv-term-v">5 sites + platform</span></div><div class="inv-term-row"><span class="inv-term-k">Lead founders</span><span class="inv-term-v">Rummana Dada + UNTIL</span></div><div class="inv-term-row"><span class="inv-term-k">Instrument</span><span class="inv-term-v">SAFE or Priced Equity</span></div></div><p style="font-size:9px;color:rgba(245,249,253,.18);margin-top:12px;line-height:1.6">Confidential · For authorised recipients only · Not an offer to sell securities.</p></div>
     </div>
   </div>
@@ -1369,104 +1337,58 @@ body.portal-open .site-footer{display:none!important}
   </div>
 </div>
 
-<!-- STRIPE MODAL -->
-<div class="stripe-overlay" id="stripeOverlay" onclick="if(event.target===this)closeCheckout()">
-  <div class="stripe-modal">
-    <div class="stripe-head">
-      <div><div class="stripe-head-plan" id="s-plan">Tier One · Founding Member</div><div class="stripe-head-title" id="s-title">Still Access</div><div class="stripe-head-price" id="s-price">£199 / month</div><div class="stripe-head-note" id="s-note">Billed monthly · Cancel anytime</div></div>
-      <button class="stripe-close-btn" onclick="closeCheckout()">✕</button>
-    </div>
-    <div class="stripe-body" id="stripeForm">
-      <div class="stripe-billing-toggle">
-        <button class="stripe-billing-btn active" id="sm-monthly" onclick="setModalBilling('monthly')">Monthly</button>
-        <button class="stripe-billing-btn" id="sm-annual" onclick="setModalBilling('annual')">Annual <span class="save-badge">20% OFF</span></button>
-      </div>
-      <div class="stripe-field-group"><label class="stripe-label">Full Name</label><input type="text" class="stripe-input" id="s-name" placeholder="As on your card" autocomplete="name"></div>
-      <div class="stripe-field-group"><label class="stripe-label">Email Address</label><input type="email" class="stripe-input" id="s-email" placeholder="hello@yourdomain.com" autocomplete="email"></div>
-      <div class="stripe-field-group"><label class="stripe-label">Card Details</label><div class="stripe-card-el" id="cardElement"></div></div>
-      <div class="stripe-divider"></div>
-      <div class="stripe-secure"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Secured by Stripe · 256-bit SSL · Cancel anytime</div>
-      <button class="stripe-submit" id="stripeSubmit" onclick="handlePayment()"><span class="spinner"></span><span class="btn-text">Start Membership</span></button>
-      <div class="stripe-error" id="stripeError"></div>
-      <p class="stripe-note" style="margin-top:10px">Your card is secured today. Fee adjusted for time before Still Lounge opens. Founding member rate locked for life.</p>
-    </div>
-    <div class="stripe-success" id="stripeSuccess">
-      <div class="stripe-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-      <div style="font-family:var(--serif);font-size:22px;font-weight:300;color:var(--c1)">Welcome to Still.</div>
-      <p class="t-small">Your founding membership is confirmed. Check your email for next steps and Raynes Park access details.</p>
-      <button onclick="closeCheckout()" class="btn btn-dark">Done</button>
-    </div>
-  </div>
-</div>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// ── CONFIG ──────────────────────────────────────────────────
-const STRIPE_KEY = 'pk_test_REPLACE_WITH_YOUR_PUBLISHABLE_KEY';
-const PRICE_IDS = {
-  access_monthly:'price_REPLACE_STILL_ACCESS_MONTHLY',
-  access_annual: 'price_REPLACE_STILL_ACCESS_ANNUAL',
-  chrome_monthly:'price_REPLACE_STILL_CHROME_MONTHLY',
-  chrome_annual: 'price_REPLACE_STILL_CHROME_ANNUAL'
-};
-const ENDPOINT = '/api/create-subscription';
-// SHA-256 of 'still2025' — never store plaintext passwords
-const INV_HASH = '742cc609cce965aa4620e5d9959c35cd4d1b64159f92677a8012add86e05966c';
-
-// ── PLAN DATA ───────────────────────────────────────────────
-const PLANS = {
-  access:{title:'Still Access',plan:'Tier One · Founding Member',monthly:{price:'£199 / month',note:'Billed monthly · Cancel anytime',saving:'~£6.60 a day — less than your coffee'},annual:{price:'£1,910 / year',note:'Billed annually · £159/mo equivalent',saving:'Save £478 vs monthly — founding rate locked'}},
-  chrome:{title:'Still Chrome',plan:'Tier Two · Founding Member',monthly:{price:'£499 / month',note:'Unlimited · Billed monthly · Cancel anytime',saving:'Clinic sessions cost 10–20× more per visit'},annual:{price:'£4,790 / year',note:'Unlimited · Billed annually · £399/mo equivalent',saving:'Save £1,198 vs monthly — founding rate locked'}}
-};
-
-// ── SHA-256 UTILITY ─────────────────────────────────────────
-async function sha256(str) {
-  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
-  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
-}
-
+<script>
 // ── PAGE SWITCHING ──────────────────────────────────────────
 function showPage(id) {
-  ['exp','partners','landlord'].forEach(p => {
-    const el = document.getElementById('page-' + p);
+  ['exp','partners','landlord'].forEach(function(p) {
+    var el = document.getElementById('page-' + p);
     if (el) el.classList.toggle('active', p === id);
   });
-  document.querySelectorAll('[data-page]').forEach(el => {
+  document.querySelectorAll('[data-page]').forEach(function(el) {
     el.classList.toggle('active', el.dataset.page === id);
   });
   window.scrollTo({top:0,behavior:'smooth'});
 }
-function switchPage(el) {
-  showPage(el.dataset.page);
-}
+function switchPage(el) { showPage(el.dataset.page); }
 
-// ── BILLING TOGGLE (cards) ──────────────────────────────────
-let billing = 'monthly';
+// ── BILLING TOGGLE ──────────────────────────────────────────
+var billing = 'monthly';
 function setBilling(period) {
   billing = period;
   document.getElementById('btnMonthly').classList.toggle('active', period==='monthly');
   document.getElementById('btnAnnual').classList.toggle('active', period==='annual');
-  const a = PLANS.access[period], c = PLANS.chrome[period];
-  document.getElementById('accessPrice').innerHTML = period==='monthly' ? '£199<sup style="font-size:16px;color:var(--c3)">/mo</sup>' : '£1,910<sup style="font-size:14px;color:var(--c3)">/yr</sup>';
-  document.getElementById('accessNote').textContent = a.note;
-  document.getElementById('accessSaving').textContent = a.saving;
-  document.getElementById('chromePrice').innerHTML = period==='monthly' ? '£499<sup style="font-size:16px;color:var(--c3)">/mo</sup>' : '£4,790<sup style="font-size:14px;color:var(--c3)">/yr</sup>';
-  document.getElementById('chromeNote').textContent = c.note;
-  document.getElementById('chromeSaving').textContent = c.saving;
+  if (period === 'monthly') {
+    document.getElementById('accessPrice').innerHTML = '£199<sup style="font-size:16px;color:var(--c3)">/mo</sup>';
+    document.getElementById('accessNote').textContent = 'Billed monthly · Cancel anytime';
+    document.getElementById('accessSaving').textContent = '~£6.60 a day — less than your coffee';
+    document.getElementById('chromePrice').innerHTML = '£499<sup style="font-size:16px;color:var(--c3)">/mo</sup>';
+    document.getElementById('chromeNote').textContent = 'Unlimited · Billed monthly · Cancel anytime';
+    document.getElementById('chromeSaving').textContent = 'Clinic sessions cost 10–20× more per visit';
+  } else {
+    document.getElementById('accessPrice').innerHTML = '£1,910<sup style="font-size:14px;color:var(--c3)">/yr</sup>';
+    document.getElementById('accessNote').textContent = 'Billed annually · £159/mo equivalent';
+    document.getElementById('accessSaving').textContent = 'Save £478 vs monthly — founding rate locked';
+    document.getElementById('chromePrice').innerHTML = '£4,790<sup style="font-size:14px;color:var(--c3)">/yr</sup>';
+    document.getElementById('chromeNote').textContent = 'Unlimited · Billed annually · £399/mo equivalent';
+    document.getElementById('chromeSaving').textContent = 'Save £1,198 vs monthly — founding rate locked';
+  }
 }
 
 // ── SCENARIO TABS ───────────────────────────────────────────
 function switchScenario(el) {
-  document.querySelectorAll('.sc-tab').forEach(t=>t.classList.remove('active'));
-  document.querySelectorAll('.sc-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.sc-tab').forEach(function(t){t.classList.remove('active');});
+  document.querySelectorAll('.sc-panel').forEach(function(p){p.classList.remove('active');});
   el.classList.add('active');
   document.getElementById('sc-' + el.dataset.sc).classList.add('active');
 }
 
 // ── INVESTOR PORTAL ─────────────────────────────────────────
+var INV_HASH = '742cc609cce965aa4620e5d9959c35cd4d1b64159f92677a8012add86e05966c';
+
 function openInvestorLogin() {
   document.getElementById('invOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
-  setTimeout(()=>document.getElementById('invPwd').focus(), 200);
+  setTimeout(function(){ document.getElementById('invPwd').focus(); }, 200);
 }
 function closeInvestorLogin() {
   document.getElementById('invOverlay').classList.remove('open');
@@ -1475,21 +1397,17 @@ function closeInvestorLogin() {
   document.body.style.overflow = '';
 }
 async function checkInvPwd() {
-  const val = document.getElementById('invPwd').value;
-  const hash = await sha256(val);
+  var val = document.getElementById('invPwd').value;
+  var buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(val));
+  var hash = Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,'0');}).join('');
   if (hash === INV_HASH) {
     closeInvestorLogin();
-    // Hide all site chrome
     document.body.classList.add('portal-open');
-    // Hide site pages
-    ['exp','partners','landlord'].forEach(p => {
-      const el = document.getElementById('page-' + p);
+    ['exp','partners','landlord'].forEach(function(p){
+      var el = document.getElementById('page-' + p);
       if (el) el.classList.remove('active');
     });
-    // Show portal
-    const portal = document.getElementById('page-investor');
-    portal.style.display = 'block';
-    portal.scrollTop = 0;
+    document.getElementById('page-investor').style.display = 'block';
     window.scrollTo({top:0,behavior:'instant'});
   } else {
     document.getElementById('invErr').classList.add('show');
@@ -1498,94 +1416,30 @@ async function checkInvPwd() {
   }
 }
 function closeInvestorPortal() {
-  // Hide portal
   document.getElementById('page-investor').style.display = 'none';
-  // Restore site chrome
   document.body.classList.remove('portal-open');
   showPage('exp');
 }
 
-// ── STRIPE ──────────────────────────────────────────────────
-let stripe = null, cardEl = null, currentPlan = null, modalBilling = 'monthly';
-
-function openCheckout(plan) {
-  currentPlan = plan;
-  modalBilling = billing;
-  updateModalUI();
-  document.getElementById('stripeOverlay').classList.add('open');
-  document.getElementById('stripeForm').style.display = 'block';
-  document.getElementById('stripeSuccess').classList.remove('show');
-  document.getElementById('stripeError').classList.remove('show');
-  document.getElementById('stripeSubmit').classList.remove('loading');
-  document.getElementById('stripeSubmit').disabled = false;
-  document.getElementById('s-name').value = '';
-  document.getElementById('s-email').value = '';
-  document.body.style.overflow = 'hidden';
-  if (!stripe) {
-    stripe = Stripe(STRIPE_KEY);
-    const els = stripe.elements({fonts:[{cssSrc:'https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400&display=swap'}]});
-    cardEl = els.create('card',{style:{base:{fontFamily:"'DM Sans',system-ui,sans-serif",fontSize:'13px',color:'#172838',fontWeight:'300','::placeholder':{color:'#8AAFC8'}},invalid:{color:'#B91C1C'}}});
-    cardEl.mount('#cardElement');
-    cardEl.on('focus',()=>document.getElementById('cardElement').classList.add('focused'));
-    cardEl.on('blur',()=>document.getElementById('cardElement').classList.remove('focused'));
-    cardEl.on('change',e=>{const err=document.getElementById('stripeError');if(e.error){err.textContent=e.error.message;err.classList.add('show');}else{err.classList.remove('show');}});
-  }
-  setTimeout(()=>document.getElementById('s-name').focus(), 250);
-}
-function setModalBilling(period) {
-  modalBilling = period;
-  document.getElementById('sm-monthly').classList.toggle('active', period==='monthly');
-  document.getElementById('sm-annual').classList.toggle('active', period==='annual');
-  updateModalUI();
-}
-function updateModalUI() {
-  if (!currentPlan) return;
-  const m = PLANS[currentPlan], b = m[modalBilling];
-  document.getElementById('s-plan').textContent = m.plan;
-  document.getElementById('s-title').textContent = m.title;
-  document.getElementById('s-price').textContent = b.price;
-  document.getElementById('s-note').textContent = b.note;
-}
-function closeCheckout() {
-  document.getElementById('stripeOverlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', e=>{if(e.key==='Escape'){closeCheckout();closeInvestorLogin();}});
-async function handlePayment() {
-  const name = document.getElementById('s-name').value.trim();
-  const email = document.getElementById('s-email').value.trim();
-  const btn = document.getElementById('stripeSubmit');
-  const err = document.getElementById('stripeError');
-  if (!name) {showErr('Please enter the name on your card.');return;}
-  if (!email||!email.includes('@')) {showErr('Please enter a valid email address.');return;}
-  btn.classList.add('loading');
-  btn.disabled = true;
-  err.classList.remove('show');
-  try {
-    const res = await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,email,priceId:PRICE_IDS[currentPlan+'_'+modalBilling],plan:currentPlan,billing:modalBilling,prorated:true})});
-    if (!res.ok) throw new Error((await res.json().catch(()=>({}))).message||'Server error — please try again.');
-    const {clientSecret} = await res.json();
-    const {error} = await stripe.confirmCardPayment(clientSecret,{payment_method:{card:cardEl,billing_details:{name,email}}});
-    if (error) throw new Error(error.message);
-    document.getElementById('stripeForm').style.display = 'none';
-    document.getElementById('stripeSuccess').classList.add('show');
-  } catch(e) {
-    showErr(e.message||'Something went wrong. Contact hello@still.london.');
-    btn.classList.remove('loading');
-    btn.disabled = false;
-  }
-}
-function showErr(msg) {
-  const err = document.getElementById('stripeError');
-  err.textContent = msg;
-  err.classList.add('show');
-}
-
 // ── ANCHOR LINKS ─────────────────────────────────────────────
 document.addEventListener('click', function(e) {
-  const a = e.target.closest('a[href^="#"]');
+  var a = e.target.closest('a[href^="#"]');
   if (!a) return;
-  const t = document.querySelector(a.getAttribute('href'));
+  var t = document.querySelector(a.getAttribute('href'));
   if (!t) return;
   e.preventDefault();
-  t.scrollIntoView({behavior:'smooth',block:'start'}
+  t.scrollIntoView({behavior:'smooth',block:'start'});
+});
+
+// ── GLOBAL SCOPE ─────────────────────────────────────────────
+window.showPage = showPage;
+window.switchPage = switchPage;
+window.setBilling = setBilling;
+window.switchScenario = switchScenario;
+window.openInvestorLogin = openInvestorLogin;
+window.closeInvestorLogin = closeInvestorLogin;
+window.checkInvPwd = checkInvPwd;
+window.closeInvestorPortal = closeInvestorPortal;
+</script>
+</body>
+</html>

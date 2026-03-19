@@ -26,7 +26,7 @@ button,input,select,textarea{font-family:inherit}
   --c5:#D2E4F1;   /* powder */
   --c6:#EBF2F9;   /* sky */
   --c7:#F5F9FD;   /* light */
-  --cm:#436074;   /* mid text */
+  --cm:#1a1a1a;   /* body text — near black */
   --cw:#fff;
   --bdr:rgba(23,40,56,0.09);
   --serif:'Cormorant Garamond',Georgia,serif;
@@ -85,17 +85,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:54px;background:rgba(
 .nav-logo:hover{opacity:.7}
 .nav-logo svg{display:block}
 .nav-tabs{display:flex;list-style:none;margin-left:24px;height:54px;border-left:1px solid var(--bdr)}
-.nav-tab{font-size:8.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--c2);cursor:pointer;padding:0 20px;height:100%;display:flex;align-items:center;border-right:1px solid var(--bdr);transition:background .15s,color .15s;user-select:none}
+.nav-tab{font-size:8.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--c1);cursor:pointer;padding:0 20px;height:100%;display:flex;align-items:center;border-right:1px solid var(--bdr);transition:background .15s,color .15s;user-select:none}
 .nav-tab:hover{background:var(--c6);color:var(--c1)}
 .nav-tab.active{background:var(--c1);color:var(--c7)}
-.nav-ir{font-size:8px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(23,40,56,.3);cursor:pointer;padding:0 16px;height:54px;display:flex;align-items:center;border-right:1px solid var(--bdr);transition:color .15s;white-space:nowrap}
+.nav-ir{font-size:8px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--c1);cursor:pointer;padding:0 16px;height:54px;display:flex;align-items:center;border-right:1px solid var(--bdr);transition:color .15s;white-space:nowrap}
 .nav-ir:hover{color:var(--c2)}
 /* IR button in mobile bar */
 .mob-btn-ir{border-left:1px solid var(--bdr)}
 
 /* ─── MOBILE BOTTOM BAR ─── */
 .mob-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;height:64px;background:rgba(245,249,253,.97);backdrop-filter:blur(16px);border-top:1px solid var(--bdr)}
-.mob-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;border:none;background:transparent;font-size:7.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--c2);padding:8px 4px;transition:background .15s,color .15s;user-select:none}
+.mob-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;border:none;background:transparent;font-size:7.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--c1);padding:8px 4px;transition:background .15s,color .15s;user-select:none}
 .mob-btn.active{color:var(--c1);background:var(--c6)}
 .mob-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 
@@ -904,7 +904,7 @@ body.portal-open .site-footer{display:none!important}
             <li>Early access to new locations and protocols</li>
             <li>Founding member rate — locked for life</li>
           </ul>
-          <a href="https://buy.stripe.com/bJe14o5A04GO1SveP84gg0r" target="_blank" rel="noopener" class="btn btn-dark btn-full">Pre-Register — Still Access</a>
+          <a id="accessBtn" href="https://buy.stripe.com/bJe14o5A04GO1SveP84gg0r" target="_blank" rel="noopener" class="btn btn-dark btn-full">Pre-Register — Still Access</a>
           <div class="mem-cap">⚑ 75 founding places only at Raynes Park</div>
         </div>
         <div class="mem-card mem-card-chrome">
@@ -925,7 +925,7 @@ body.portal-open .site-footer{display:none!important}
             <li>Two guest passes per month</li>
             <li>Founding member rate — locked for life</li>
           </ul>
-          <a href="https://buy.stripe.com/5kQcN61jK5KSap1eP84gg0s" target="_blank" rel="noopener" class="btn btn-light btn-full">Pre-Register — Still Chrome</a>
+          <a id="chromeBtn" href="https://buy.stripe.com/5kQcN61jK5KSap1eP84gg0s" target="_blank" rel="noopener" class="btn btn-light btn-full">Pre-Register — Still Chrome</a>
           <div class="mem-cap">⚑ Chrome strictly capped at 25 founding members</div>
         </div>
       </div>
@@ -1342,11 +1342,20 @@ function showPage(id) {
 }
 function switchPage(el) { showPage(el.dataset.page); }
 
+var STRIPE_URLS = {
+  access_monthly: 'https://buy.stripe.com/bJe14o5A04GO1SveP84gg0r',
+  access_annual:  'https://buy.stripe.com/9B614o7I8b5cgNpayS4gg0t',
+  chrome_monthly: 'https://buy.stripe.com/5kQcN61jK5KSap1eP84gg0s',
+  chrome_annual:  'https://buy.stripe.com/14AcN60fG5KSbt56iC4gg0u'
+};
+
 var billing = 'monthly';
 function setBilling(period) {
   billing = period;
   document.getElementById('btnMonthly').classList.toggle('active', period==='monthly');
   document.getElementById('btnAnnual').classList.toggle('active', period==='annual');
+  document.getElementById('accessBtn').href = STRIPE_URLS['access_' + period];
+  document.getElementById('chromeBtn').href = STRIPE_URLS['chrome_' + period];
   if (period === 'monthly') {
     document.getElementById('accessPrice').innerHTML = '£199<sup style="font-size:16px;color:var(--c3)">/mo</sup>';
     document.getElementById('accessNote').textContent = 'Billed monthly · Cancel anytime';

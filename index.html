@@ -127,30 +127,33 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:54px;background:rgba(
 ═══════════════════════════════════ */
 
 /* LOCATION BANNER */
-.loc-banner{background:var(--c1);padding:12px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.loc-banner-left{display:flex;align-items:center;gap:12px}
-.loc-dot{width:6px;height:6px;border-radius:50%;background:#FFF;flex-shrink:0}
-.loc-text{font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.60)}
-.loc-text strong{color:#FFFFFF}
+.loc-banner{background:transparent;padding:10px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:absolute;top:54px;left:0;right:0;z-index:10}
+.loc-banner-left{display:flex;align-items:center;gap:10px}
+.loc-dot{width:5px;height:5px;border-radius:50%;background:#FFF;flex-shrink:0}
+.loc-text{font-size:8px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.loc-text strong{color:rgba(255,255,255,.85)}
 
 /* HERO */
-.hero{display:flex;flex-direction:column;min-height:calc(92vh - 54px);background:linear-gradient(170deg,#1A1A1A 0%,#0A0A0A 60%);position:relative;overflow:hidden}
-.hero-l{display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center;flex:1;padding:96px 48px 56px;position:relative;z-index:1}
-.hero-eyebrow{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:28px}
+.hero{display:flex;flex-direction:column;min-height:100vh;background:#0A0A0A;position:relative;overflow:hidden}
+.hero-l{display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center;flex:1;padding:80px 48px 60px;position:relative;z-index:1}
+.hero-line{width:60px;height:1px;background:#FFF;margin:0 auto 2rem}
+.hero-eyebrow{display:flex;align-items:center;justify-content:center;margin-bottom:1.8rem}
 .hero-eyebrow-dot{display:none}
-.hero-eyebrow-text{font-size:8.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#0A0A0A;background:#FFF;padding:7px 18px}
-.hero-sub{margin-top:20px;max-width:520px;color:#FFF;text-align:center}
-.hero-price-box{margin-top:28px;padding:20px 24px;background:#1A1A1A;border:1px solid #333;width:320px}
-.hero-price-label{font-size:8.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#999;margin-bottom:6px}
-.hero-price-val{font-family:var(--serif);font-size:38px;font-weight:300;color:#FFF;line-height:1}
-.hero-price-note{font-size:11px;font-style:italic;font-family:var(--serif);color:#999;margin-top:4px}
-.hero-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px;justify-content:center}
-.hero-wm{font-family:var(--serif);font-size:400px;font-weight:300;color:rgba(255,255,255,.03);position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);line-height:1;user-select:none;letter-spacing:-.04em;pointer-events:none;z-index:0}
-.hero-panels{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.10);position:relative;z-index:1}
-.hero-panel{padding:20px 28px;display:flex;flex-direction:column;gap:7px;border-right:1px solid rgba(255,255,255,.10)}
+.hero-eyebrow-text{font-size:8px;font-weight:500;letter-spacing:.45em;text-transform:uppercase;color:#0A0A0A;background:#FFF;padding:6px 20px}
+.hero-supertitle{font-size:9px;font-weight:400;letter-spacing:.55em;text-transform:uppercase;color:#555;margin-bottom:.6rem}
+.t-h1-hero{font-family:var(--serif);font-weight:300;font-size:clamp(2.8rem,6vw,5.2rem);line-height:1.1;color:#FFF;letter-spacing:.02em;margin-bottom:.4rem}
+.t-h1-hero em{font-style:italic;color:#FFF}
+.hero-italic-sub{font-family:var(--serif);font-size:clamp(1rem,2vw,1.35rem);font-weight:300;font-style:italic;color:#666;margin-bottom:1.5rem}
+.hero-sub{font-size:.82rem;font-weight:300;color:#555;letter-spacing:.08em;max-width:460px;text-align:center;line-height:1.85;margin-top:0}
+.hero-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:2rem;justify-content:center}
+.hero-scroll{position:absolute;bottom:96px;left:50%;transform:translateX(-50%);z-index:2}
+.hero-scroll span{display:block;width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent);animation:scrollpulse 2s ease-in-out infinite}
+@keyframes scrollpulse{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+.hero-panels{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.07);position:relative;z-index:1}
+.hero-panel{padding:22px 28px;display:flex;flex-direction:column;gap:6px;border-right:1px solid rgba(255,255,255,.07)}
 .hero-panel:last-child{border-right:none}
-.hero-panel-l{font-size:8px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#666}
-.hero-panel-r{font-family:var(--serif);font-size:22px;font-weight:300;color:#FFF}
+.hero-panel-l{font-size:7.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#444}
+.hero-panel-r{font-family:var(--serif);font-size:19px;font-weight:300;color:#888}
 
 /* WHAT */
 .what-section{background:#FFF;padding:52px 48px}
@@ -699,23 +702,19 @@ body.portal-open .site-footer{display:none!important}
 <!-- PAGE 1 — EXPERIENCE -->
 <div class="page active" id="page-exp">
 
-  <div class="loc-banner">
-    <div class="loc-banner-left">
-      <div class="loc-dot pulse"></div>
-      <span class="loc-text"><strong>Opening 5 May 2025:</strong> Wimbledon Village, London SW19 · Membership strictly capped</span>
-    </div>
-    <a href="#membership" class="btn btn-sm" style="background:rgba(255,255,255,.12);color:#FFFFFF;border:1px solid rgba(255,255,255,.2)">Register Now</a>
-  </div>
 
   <div class="hero">
-    <div class="hero-wm">S</div>
     <div class="hero-l">
-      <div class="hero-eyebrow"><span class="hero-eyebrow-text">Advanced Longevity · On Demand · Near You</span></div>
-      <h1 class="t-h1-hero">The most advanced<br>biohacking tools.<br><span class="em">On your high street.</span></h1>
-      <p class="t-body hero-sub">The protocols elite athletes and longevity scientists have used for years — now available everywhere, for the price of what you spend on coffee.</p>
+      <div class="hero-line"></div>
+      <div class="hero-eyebrow"><span class="hero-eyebrow-text">Opening May 2025 · Wimbledon Village</span></div>
+      <div class="hero-supertitle">Still Longevity</div>
+      <h1 class="t-h1-hero">The most advanced<br>biohacking tools.<br><em>On your high street.</em></h1>
+      <div class="hero-italic-sub">The protocols of elite athletes, available to everyone.</div>
+      <p class="t-body hero-sub">Now on your high street — walk in, no appointment, for the price of a daily coffee.</p>
       <div class="hero-actions">
-        <a href="#membership" class="btn" style="background:transparent;border:1px solid #FFF;color:#FFF">Join Still</a>
+        <a href="#membership" class="btn" style="background:transparent;border:1px solid rgba(255,255,255,.5);color:#FFF;letter-spacing:.25em">Join Still</a>
       </div>
+      <div class="hero-scroll"><span></span></div>
     </div>
     <div class="hero-panels">
       <div class="hero-panel"><span class="hero-panel-l">Protocols available</span><span class="hero-panel-r">12 tools</span></div>
@@ -1098,10 +1097,10 @@ body.portal-open .site-footer{display:none!important}
       <div>
         <p class="t-body" style="margin-bottom:22px">We work with a curated selection of venue partners across the UK and Dubai. If your space is well-located and your audience is health-minded — we'd like to hear from you.</p>
         <div class="l-cta-links">
-          <a href="/cdn-cgi/l/email-protection#5b333e3737341b282f323737753734353f3435"><span class="__cf_email__" data-cfemail="4f272a2323200f3c3b262323612320212b2021">[email&#160;protected]</span></a>
+          hello@still.london
         </div>
         <div class="cta-btns">
-          <a href="/cdn-cgi/l/email-protection#08606d646467487b7c616464266467666c6766" class="btn btn-light">Start the Conversation</a>
+          <a href="mailto:hello@still.london" class="btn btn-light">Start the Conversation</a>
           <button class="btn btn-outline" onclick="showPage('partners')">Partner Info</button>
         </div>
       </div>
@@ -1126,10 +1125,10 @@ body.portal-open .site-footer{display:none!important}
     <li><a href="javascript:void(0)" onclick="showPage('exp')">Experience</a></li>
     <li><a href="javascript:void(0)" onclick="showPage('partners')">Partners</a></li>
     <li><a href="javascript:void(0)" onclick="showPage('landlord')">Landlord</a></li>
-    <li><a href="/cdn-cgi/l/email-protection#c0a8a5acacaf80b3b4a9acaceeacafaea4afae">Contact</a></li>
+    <li><a href="mailto:hello@still.london">Contact</a></li>
     <li><a href="javascript:void(0)" onclick="openInvestorLogin()" style="color:rgba(245,249,253,.1)">IR</a></li>
   </ul>
-  <div class="site-footer-copy">An UNTIL Company · © 2025 Still · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9af2fff6f6f5dae9eef3f6f6b4f6f5f4fef5f4">[email&#160;protected]</a></div>
+  <div class="site-footer-copy">An UNTIL Company · © 2025 Still · hello@still.london</div>
 </footer>
 
 <!-- INVESTOR LOGIN MODAL -->
@@ -1144,7 +1143,7 @@ body.portal-open .site-footer{display:none!important}
     <div class="inv-modal-body">
       <p class="t-small" style="margin-bottom:16px">Confidential financial information for authorised investors and prospective investors. Enter your access code to continue.</p>
       <div class="form-group"><label class="form-label">Access Code</label><input type="password" class="form-input" id="invPwd" placeholder="Enter access code" onkeydown="if(event.key==='Enter')checkInvPwd()" style="letter-spacing:.18em"></div>
-      <div class="inv-err" id="invErr">Incorrect code. Contact <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="760412361e031b17181f020f5b1517061f02171a5815191b">[email&#160;protected]</a></div>
+      <div class="inv-err" id="invErr">Incorrect code. Contact hello@still.london</div>
       <div style="display:flex;gap:8px;margin-top:4px">
         <button onclick="checkInvPwd()" class="btn btn-dark" style="flex:1">Access Portal</button>
         <button onclick="closeInvestorLogin()" class="btn btn-outline">Cancel</button>
@@ -1247,7 +1246,7 @@ body.portal-open .site-footer{display:none!important}
 
   <div class="inv-cta-section inv">
     <div class="inv-cta-inner">
-      <div><h2 class="t-h2 inv" style="margin-bottom:16px">Request the full <span class="em">information memorandum.</span></h2><p class="t-body inv" style="margin-bottom:22px">Full financial model, cap table, term sheet, and site pipeline available under NDA. Series Seed — target close Q3 2025.</p><div style="display:flex;flex-direction:column;gap:4px;margin-bottom:22px"><a href="/cdn-cgi/l/email-protection#a3cbc6cfcfcce3d0d7cacfcf8dcfcccdc7cccd" style="font-family:var(--serif);font-size:19px;font-weight:300;color:#FFFFFF;text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--c3)'" onmouseout="this.style.color='#FFFFFF'"><span class="__cf_email__" data-cfemail="452d2029292a0536312c29296b292a2b212a2b">[email&#160;protected]</span></a><a href="tel:+447808889888" style="font-family:var(--serif);font-size:19px;font-weight:300;color:#FFFFFF;text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--c3)'" onmouseout="this.style.color='#FFFFFF'">+44 780 888 9 888</a></div><div style="display:flex;gap:8px;flex-wrap:wrap"><a href="/cdn-cgi/l/email-protection#630b060f0f0c2310170a0f0f4d0f0c0d070c0d" class="btn btn-light">Request the IM</a><button onclick="closeInvestorPortal()" class="btn btn-ghost-inv">Back to Site</button></div></div>
+      <div><h2 class="t-h2 inv" style="margin-bottom:16px">Request the full <span class="em">information memorandum.</span></h2><p class="t-body inv" style="margin-bottom:22px">Full financial model, cap table, term sheet, and site pipeline available under NDA. Series Seed — target close Q3 2025.</p><div style="display:flex;flex-direction:column;gap:4px;margin-bottom:22px">hello@still.london<a href="tel:+447808889888" style="font-family:var(--serif);font-size:19px;font-weight:300;color:#FFFFFF;text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--c3)'" onmouseout="this.style.color='#FFFFFF'">+44 780 888 9 888</a></div><div style="display:flex;gap:8px;flex-wrap:wrap"><a href="mailto:hello@still.london" class="btn btn-light">Request the IM</a><button onclick="closeInvestorPortal()" class="btn btn-ghost-inv">Back to Site</button></div></div>
       <div><div class="inv-terms-box"><div style="font-size:8.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.30);margin-bottom:14px">Key Terms · Indicative</div><div class="inv-term-row"><span class="inv-term-k">Round size</span><span class="inv-term-v">£2–5M</span></div><div class="inv-term-row"><span class="inv-term-k">Stage</span><span class="inv-term-v">Series Seed</span></div><div class="inv-term-row"><span class="inv-term-k">Target close</span><span class="inv-term-v">Q3 2025</span></div><div class="inv-term-row"><span class="inv-term-k">Use of funds</span><span class="inv-term-v">5 sites + platform</span></div><div class="inv-term-row"><span class="inv-term-k">Lead founders</span><span class="inv-term-v">Rummana Dada + UNTIL</span></div><div class="inv-term-row"><span class="inv-term-k">Instrument</span><span class="inv-term-v">SAFE or Priced Equity</span></div></div><p style="font-size:9px;color:rgba(255,255,255,.18);margin-top:12px;line-height:1.6">Confidential · For authorised recipients only · Not an offer to sell securities.</p></div>
     </div>
   </div>
@@ -1267,7 +1266,7 @@ body.portal-open .site-footer{display:none!important}
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 function showPage(id) {
   ['exp','partners','landlord'].forEach(function(p) {
     var el = document.getElementById('page-' + p);

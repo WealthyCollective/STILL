@@ -38,7 +38,7 @@ button,input,select,textarea{font-family:inherit}
 .t-label{font-size:9px;font-weight:500;letter-spacing:.40em;text-transform:uppercase;color:var(--c3)}
 .t-label-inv{color:rgba(255,255,255,.30)}
 .t-h1{font-family:var(--serif);font-weight:300;font-size:clamp(40px,7vw,80px);line-height:1.02;color:var(--c1)}
-.t-h1-hero{font-family:var(--serif);font-weight:300;font-size:clamp(32px,5vw,60px);line-height:1.05;color:var(--c1)}
+.t-h1-hero{font-family:var(--serif);font-weight:300;font-size:clamp(32px,5vw,60px);line-height:1.05;color:#FFF}
 .t-h2{font-family:var(--serif);font-weight:300;font-size:clamp(28px,5vw,52px);line-height:1.06;color:var(--c1)}
 .t-h3{font-family:var(--serif);font-weight:400;font-size:clamp(18px,2.5vw,22px);line-height:1.3;color:var(--c1)}
 .t-body{font-size:14px;line-height:1.85;color:var(--cm)}
@@ -61,7 +61,7 @@ button,input,select,textarea{font-family:inherit}
 
 /* ─── CARDS ─── */
 .card{background:var(--c6);padding:36px 28px}
-.card-w{background:var(--cw);padding:36px 28px;border:1px solid var(--bdr)}
+.card-w{background:#FFF;padding:36px 28px;border:1px solid #DDD}
 .card-inv{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:36px 28px}
 
 /* ─── BUTTONS ─── */
@@ -104,9 +104,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:54px;background:rgba(
 .tag-inv{border-color:rgba(255,255,255,.1);color:rgba(255,255,255,.42)}
 .divider{height:1px;background:var(--bdr)}
 .divider-inv{height:1px;background:rgba(255,255,255,.08)}
-.until-bar{background:var(--c5);border-top:1px solid var(--c4);padding:20px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.until-bar span:first-child{font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--c2)}
-.until-bar span:last-child{font-family:var(--serif);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--c1)}
+.until-bar{background:#333;border-top:1px solid #444;padding:20px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.until-bar span:first-child{font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#999}
+.until-bar span:last-child{font-family:var(--serif);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#FFF}
 .site-footer{background:var(--c1);border-top:1px solid rgba(255,255,255,.06);padding:24px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .site-footer-logo{display:flex;align-items:center;color:rgba(255,255,255,.22)}
 .site-footer-logo svg{display:block}
@@ -129,30 +129,29 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:54px;background:rgba(
 .loc-text strong{color:#FFFFFF}
 
 /* HERO */
-.hero{display:grid;grid-template-columns:1.1fr 1fr;min-height:calc(92vh - 54px)}
-.hero-l{display:flex;flex-direction:column;justify-content:center;padding:64px 48px}
-.hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:24px}
-.hero-eyebrow-dot{width:5px;height:5px;border-radius:50%;background:var(--c3);flex-shrink:0}
-.hero-eyebrow-text{font-size:9px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--c3)}
-.hero-sub{margin-top:20px;max-width:440px}
-.hero-price-box{margin-top:28px;padding:20px 24px;background:var(--c6);border:1px solid var(--c5);max-width:340px}
-.hero-price-label{font-size:8.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--c2);margin-bottom:6px}
-.hero-price-val{font-family:var(--serif);font-size:38px;font-weight:300;color:var(--c1);line-height:1}
-.hero-price-note{font-size:11px;font-style:italic;font-family:var(--serif);color:var(--cm);margin-top:4px}
-.hero-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
-.hero-r{background:linear-gradient(148deg,#1A1A1A 0%,#111 45%,#0A0A0A 100%);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:36px}
-.hero-wm{font-family:var(--serif);font-size:260px;font-weight:300;color:rgba(255,255,255,.06);position:absolute;top:-20px;left:-10px;line-height:1;user-select:none;letter-spacing:-.04em;pointer-events:none}
-.hero-r::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 35% 45%,rgba(255,255,255,.04) 0%,transparent 70%)}
-.hero-panels{position:relative;z-index:1;display:flex;flex-direction:column;gap:3px}
-.hero-panel{background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);padding:13px 20px;display:flex;align-items:center;justify-content:space-between}
-.hero-panel-l{font-size:8px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--c2)}
-.hero-panel-r{font-family:var(--serif);font-size:20px;font-weight:300;color:var(--c1)}
+.hero{display:flex;flex-direction:column;min-height:calc(92vh - 54px);background:linear-gradient(170deg,#1A1A1A 0%,#0A0A0A 60%);position:relative;overflow:hidden}
+.hero-l{display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center;flex:1;padding:96px 48px 56px;position:relative;z-index:1}
+.hero-eyebrow{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:28px}
+.hero-eyebrow-dot{display:none}
+.hero-eyebrow-text{font-size:8.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#0A0A0A;background:#FFF;padding:7px 18px}
+.hero-sub{margin-top:20px;max-width:520px;color:#FFF;text-align:center}
+.hero-price-box{margin-top:28px;padding:20px 24px;background:#1A1A1A;border:1px solid #333;width:320px}
+.hero-price-label{font-size:8.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#999;margin-bottom:6px}
+.hero-price-val{font-family:var(--serif);font-size:38px;font-weight:300;color:#FFF;line-height:1}
+.hero-price-note{font-size:11px;font-style:italic;font-family:var(--serif);color:#999;margin-top:4px}
+.hero-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px;justify-content:center}
+.hero-wm{font-family:var(--serif);font-size:400px;font-weight:300;color:rgba(255,255,255,.03);position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);line-height:1;user-select:none;letter-spacing:-.04em;pointer-events:none;z-index:0}
+.hero-panels{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.10);position:relative;z-index:1}
+.hero-panel{padding:20px 28px;display:flex;flex-direction:column;gap:7px;border-right:1px solid rgba(255,255,255,.10)}
+.hero-panel:last-child{border-right:none}
+.hero-panel-l{font-size:8px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#666}
+.hero-panel-r{font-family:var(--serif);font-size:22px;font-weight:300;color:#FFF}
 
 /* WHAT */
-.what-section{background:var(--c1);padding:52px 48px}
+.what-section{background:#FFF;padding:52px 48px}
 .what-inner{display:grid;grid-template-columns:120px 1fr;gap:48px;align-items:center}
-.what-q{font-family:var(--serif);font-size:clamp(14px,1.8vw,20px);font-weight:300;line-height:1.5;color:rgba(255,255,255,.80)}
-.what-q strong{color:#FFFFFF;font-weight:400}
+.what-q{font-family:var(--serif);font-size:clamp(14px,1.8vw,20px);font-weight:300;line-height:1.5;color:#333}
+.what-q strong{color:#0A0A0A;font-weight:400}
 
 /* TOOLS */
 .tools-section{background:var(--c1);padding:0 48px 60px}
@@ -179,79 +178,79 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:54px;background:rgba(
 .diff-no-icon svg{stroke:#666666}
 
 /* SCALE */
-.scale-section{background:var(--c6)}
+.scale-section{background:#0A0A0A}
 .scale-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.scale-big{font-family:var(--serif);font-size:clamp(40px,6vw,72px);font-weight:300;color:var(--c1);line-height:.95;letter-spacing:-.02em}
-.scale-big span{color:var(--c3)}
-.scale-coffee-box{margin-top:20px;padding:18px 22px;background:var(--cw);border:1px solid var(--bdr);max-width:380px}
-.scale-coffee-label{font-size:8.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--c2);margin-bottom:8px}
+.scale-big{font-family:var(--serif);font-size:clamp(40px,6vw,72px);font-weight:300;color:#FFF;line-height:.95;letter-spacing:-.02em}
+.scale-big span{color:#666}
+.scale-coffee-box{margin-top:20px;padding:18px 22px;background:#1A1A1A;border:1px solid #333;max-width:380px}
+.scale-coffee-label{font-size:8.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#999;margin-bottom:8px}
 .scale-rows{display:flex;flex-direction:column}
-.scale-row{display:grid;grid-template-columns:36px 1fr;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--bdr)}
+.scale-row{display:grid;grid-template-columns:36px 1fr;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid #222}
 .scale-row:last-child{border-bottom:none}
-.scale-icon{width:36px;height:36px;border:1px solid var(--bdr);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.scale-icon{width:36px;height:36px;border:1px solid #333;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .scale-icon svg{width:15px;height:15px;fill:none;stroke:var(--c2);stroke-width:1.5;stroke-linecap:round}
-.scale-row-label{font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--c2);margin-bottom:3px}
-.scale-row-val{font-family:var(--serif);font-size:15px;font-weight:300;color:var(--c1)}
+.scale-row-label{font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#999;margin-bottom:3px}
+.scale-row-val{font-family:var(--serif);font-size:15px;font-weight:300;color:#FFF}
 
 /* LOCATION */
 .location-section{background:var(--cw)}
-.loc-card{background:var(--c1);padding:36px 32px;display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center}
-.loc-card-tag{font-size:8.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.30);margin-bottom:8px}
-.loc-card-name{font-family:var(--serif);font-size:clamp(22px,3vw,32px);font-weight:300;color:#FFFFFF;margin-bottom:6px}
-.loc-card-detail{font-size:11px;color:rgba(255,255,255,.42);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.loc-open{display:inline-flex;align-items:center;gap:7px;font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#FFFFFF}
-.loc-open::before{content:'';width:5px;height:5px;border-radius:50%;background:#FFF;flex-shrink:0}
-.loc-cap-note{font-size:8.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:12px}
+.loc-card{background:#F5F5F5;border:1px solid #E0E0E0;padding:36px 32px;display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center}
+.loc-card-tag{font-size:8.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#999;margin-bottom:8px}
+.loc-card-name{font-family:var(--serif);font-size:clamp(22px,3vw,32px);font-weight:300;color:#0A0A0A;margin-bottom:6px}
+.loc-card-detail{font-size:11px;color:#666;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.loc-open{display:inline-flex;align-items:center;gap:7px;font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#0A0A0A}
+.loc-open::before{content:'';width:5px;height:5px;border-radius:50%;background:#0A0A0A;flex-shrink:0}
+.loc-cap-note{font-size:8.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#999;margin-top:12px}
 .loc-card-right{text-align:right;min-width:160px}
 
 /* MEMBERSHIP */
-.mem-section{background:var(--c7)}
-.mem-banner{background:var(--c1);padding:20px 28px;margin-bottom:3px;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.mem-section{background:#0A0A0A}
+.mem-banner{background:#151515;border:1px solid #222;padding:20px 28px;margin-bottom:3px;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:14px}
 .mem-banner-main{display:flex;align-items:center;gap:12px}
 .mem-banner-text h3{font-family:var(--serif);font-size:16px;font-weight:300;color:#FFFFFF}
 .mem-banner-text p{font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-top:3px}
-.billing-toggle{display:inline-flex;border:1px solid var(--bdr);overflow:hidden;margin-bottom:20px}
-.billing-btn{font-size:8.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:11px 24px;border:none;cursor:pointer;background:transparent;color:var(--c2);transition:background .15s,color .15s;display:flex;align-items:center;gap:8px}
-.billing-btn.active{background:var(--c1);color:var(--c7)}
+.billing-toggle{display:inline-flex;border:1px solid #333;overflow:hidden;margin-bottom:20px}
+.billing-btn{font-size:8.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:11px 24px;border:none;cursor:pointer;background:#222;color:#999;transition:background .15s,color .15s;display:flex;align-items:center;gap:8px}
+.billing-btn.active{background:#333;color:#FFF}
 .save-badge{background:#FFF;color:#0A0A0A;font-size:7px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:2px 6px}
 .mem-cards{display:grid;grid-template-columns:1fr 1fr;gap:3px}
 .mem-card{padding:36px 28px;position:relative;overflow:hidden}
-.mem-card-access{background:var(--cw);border:1px solid var(--bdr)}
-.mem-card-chrome{background:var(--c1)}
+.mem-card-access{background:#151515;border:1px solid #333}
+.mem-card-chrome{background:#1A1A1A}
 .mem-tier{font-size:8.5px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--c3);margin-bottom:12px}
 .mem-card-chrome .mem-tier{color:rgba(255,255,255,.28)}
-.mem-name{font-family:var(--serif);font-size:clamp(24px,3vw,30px);font-weight:300;color:var(--c1)}
+.mem-name{font-family:var(--serif);font-size:clamp(24px,3vw,30px);font-weight:300;color:#FFF}
 .mem-card-chrome .mem-name{color:#FFFFFF}
-.mem-price{font-family:var(--serif);font-size:clamp(36px,5vw,50px);font-weight:300;color:var(--c1);line-height:1;margin:20px 0 4px}
+.mem-price{font-family:var(--serif);font-size:clamp(36px,5vw,50px);font-weight:300;color:#FFF;line-height:1;margin:20px 0 4px}
 .mem-card-chrome .mem-price{color:#FFFFFF}
-.mem-price-note{font-size:8.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--c3)}
+.mem-price-note{font-size:8.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#666}
 .mem-card-chrome .mem-price-note{color:rgba(255,255,255,.28)}
-.mem-note{font-size:11px;font-style:italic;font-family:var(--serif);color:var(--c2);margin-top:8px}
+.mem-note{font-size:11px;font-style:italic;font-family:var(--serif);color:#999;margin-top:8px}
 .mem-card-chrome .mem-note{color:rgba(255,255,255,.42)}
-.mem-divider{height:1px;background:var(--bdr);margin:20px 0}
+.mem-divider{height:1px;background:#333;margin:20px 0}
 .mem-card-chrome .mem-divider{background:rgba(255,255,255,.08)}
 .mem-feats{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
-.mem-feats li{font-size:12.5px;color:var(--cm);display:flex;gap:10px;align-items:baseline}
+.mem-feats li{font-size:12.5px;color:#BBB;display:flex;gap:10px;align-items:baseline}
 .mem-card-chrome .mem-feats li{color:rgba(255,255,255,.50)}
-.mem-feats li::before{content:'—';color:var(--c3);flex-shrink:0}
+.mem-feats li::before{content:'—';color:#666;flex-shrink:0}
 .mem-card-chrome .mem-feats li::before{color:rgba(255,255,255,.2)}
-.mem-cap{font-size:8.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--c2);margin-top:10px;padding-top:10px;border-top:1px solid var(--bdr)}
+.mem-cap{font-size:8.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#999;margin-top:10px;padding-top:10px;border-top:1px solid #333}
 .mem-card-chrome .mem-cap{color:rgba(255,255,255,.30);border-top-color:rgba(255,255,255,.08)}
 .mem-bg{font-family:var(--serif);font-size:100px;font-weight:300;position:absolute;bottom:-14px;right:-8px;color:rgba(0,0,0,.03);user-select:none;pointer-events:none;line-height:1}
 .mem-card-chrome .mem-bg{color:rgba(255,255,255,.05)}
-.proration-note{background:var(--c6);border:1px solid var(--c5);padding:18px 24px;display:flex;gap:12px;align-items:flex-start;margin-top:3px}
+.proration-note{background:#151515;border:1px solid #333;padding:18px 24px;display:flex;gap:12px;align-items:flex-start;margin-top:3px}
 .proration-note svg{width:15px;height:15px;fill:none;stroke:var(--c2);stroke-width:1.8;stroke-linecap:round;flex-shrink:0;margin-top:1px}
 
 /* ═══════════════════════════════════
    PAGE 2 — PARTNERS
 ═══════════════════════════════════ */
-.p-hero{background:var(--c6);padding:72px 48px 56px;display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:end}
-.p-stats-box{background:var(--c1);padding:36px 32px}
+.p-hero{background:#0A0A0A;padding:72px 48px 56px;display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:end}
+.p-stats-box{background:#151515;border:1px solid #222;padding:36px 32px}
 .p-stat-row{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08);display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline}
 .p-stat-row:last-child{border-bottom:none;padding-bottom:0}
 .p-stat-num{font-family:var(--serif);font-size:clamp(28px,4vw,38px);font-weight:300;color:#FFFFFF;line-height:1}
 .p-stat-desc{font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.28)}
-.why-section{background:var(--c7)}
+.why-section{background:#FFF}
 .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
 .why-card{background:var(--c6);padding:32px 26px;position:relative;overflow:hidden}
 .why-n{font-family:var(--serif);font-size:60px;font-weight:300;position:absolute;top:10px;right:14px;color:rgba(0,0,0,.05);line-height:1;user-select:none;pointer-events:none}
@@ -266,7 +265,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:54px;background:rgba(
 .partner-fig-n{font-family:var(--serif);font-size:26px;font-weight:300;color:var(--c5)}
 .partner-fig-l{font-size:8.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-top:3px}
 /* comparison table */
-.comp-section{background:var(--c6)}
+.comp-section{background:#FFF}
 .comp-table{border:1px solid var(--bdr);overflow:hidden;width:100%}
 .comp-thead{display:grid;grid-template-columns:2fr 1fr 1fr;background:var(--c1)}
 .comp-th{padding:14px 22px;font-size:8.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.30)}
@@ -278,11 +277,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:54px;background:rgba(
 .comp-cell.metric{color:var(--c1);font-weight:400}
 .comp-cell.good{background:rgba(210,228,241,.35);color:var(--c1);font-weight:500}
 /* returns */
-.rets-section{background:var(--cw)}
+.rets-section{background:#0A0A0A}
 .rets-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px}
 .ret-card{padding:36px 28px}
-.ret-own{background:var(--c6);border:1px solid var(--bdr)}
-.ret-still{background:var(--c1)}
+.ret-own{background:#F5F5F5;border:1px solid #DDD}
+.ret-still{background:#1A1A1A}
 .ret-label{font-size:8.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;display:block;margin-bottom:14px}
 .ret-own .ret-label{color:var(--c2)}
 .ret-still .ret-label{color:rgba(255,255,255,.30)}
@@ -308,7 +307,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:54px;background:rgba(
 .ret-own .ret-tv{color:#666666}
 .ret-still .ret-tv{color:#CCCCCC}
 /* register */
-.reg-section{background:var(--c5)}
+.reg-section{background:#FFF}
 .reg-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px}
 .reg-left{background:var(--c6);padding:36px 28px}
 .reg-right{background:var(--cw);padding:36px 28px}
@@ -329,16 +328,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:54px;background:rgba(
 ═══════════════════════════════════ */
 .l-hero{display:grid;grid-template-columns:1fr 1fr}
 .l-hero-dark{background:var(--c1);padding:96px 48px 64px;display:flex;flex-direction:column;justify-content:flex-end}
-.l-hero-light{background:var(--c6);padding:96px 44px 64px;display:flex;flex-direction:column;justify-content:flex-end}
+.l-hero-light{background:#FFF;padding:96px 44px 64px;display:flex;flex-direction:column;justify-content:flex-end}
 .l-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:22px}
 .l-mini{background:var(--cw);padding:16px 18px;border:1px solid var(--bdr)}
 .l-mini-n{font-family:var(--serif);font-size:22px;font-weight:300;color:var(--c1);line-height:1;margin-bottom:4px}
 .l-mini-l{font-size:8.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--c2)}
-.l-rev-section{background:var(--cw)}
+.l-rev-section{background:#FFF}
 .l-rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
 .l-rev-icon{width:36px;height:36px;border:1px solid var(--bdr);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
 .l-rev-icon svg{width:15px;height:15px;fill:none;stroke:var(--c2);stroke-width:1.5;stroke-linecap:round}
-.l-model-section{background:var(--c6)}
+.l-model-section{background:#FFF}
 .l-steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
 .l-step{background:var(--c7);padding:32px 24px;position:relative}
 .l-step-n{font-size:8.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--c3);margin-bottom:20px;display:block}
@@ -356,13 +355,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:54px;background:rgba(
 .vance-ey{font-size:8.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:8px}
 .vance-name{font-family:var(--serif);font-size:22px;font-weight:300;color:#FFFFFF;margin-bottom:4px}
 .vance-role{font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:14px}
-.l-econ-section{background:var(--c5)}
+.l-econ-section{background:#0A0A0A}
 .l-econ-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
-.l-econ-card{background:var(--cw);padding:28px 22px;border:1px solid var(--bdr)}
-.l-econ-n{font-family:var(--serif);font-size:clamp(26px,3vw,38px);font-weight:300;color:var(--c1);line-height:1;margin-bottom:7px}
-.l-econ-l{font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--c2);line-height:1.5}
-.l-econ-summary{background:var(--cw);border:1px solid var(--bdr);padding:28px 32px;margin-top:3px;display:grid;grid-template-columns:1fr 1fr auto;gap:32px;align-items:center}
-.l-cta-section{background:var(--c1);padding:80px 48px}
+.l-econ-card{background:#151515;padding:28px 22px;border:1px solid #333}
+.l-econ-n{font-family:var(--serif);font-size:clamp(26px,3vw,38px);font-weight:300;color:#FFF;line-height:1;margin-bottom:7px}
+.l-econ-l{font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#999;line-height:1.5}
+.l-econ-summary{background:#151515;border:1px solid #333;padding:28px 32px;margin-top:3px;display:grid;grid-template-columns:1fr 1fr auto;gap:32px;align-items:center}
+.l-cta-section{background:#FFF;padding:80px 48px}
 .l-cta-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end}
 .l-cta-links{display:flex;flex-direction:column;gap:4px;margin-bottom:24px}
 .l-cta-links a{font-family:var(--serif);font-size:20px;font-weight:300;color:#FFFFFF;text-decoration:none;transition:color .15s}
@@ -403,78 +402,78 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:54px;background:rgba(
 body.portal-open nav,
 body.portal-open .mob-bar,
 body.portal-open .site-footer{display:none!important}
-.inv-nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--bdr);padding:0 48px;height:46px;display:flex;align-items:center;justify-content:space-between}
+.inv-nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.97);backdrop-filter:blur(12px);border-bottom:1px solid #222;padding:0 48px;height:46px;display:flex;align-items:center;justify-content:space-between}
 .inv-nav-lbl{font-size:8.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--c2)}
-.inv-nav-close{font-size:8.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--cm);cursor:pointer;background:none;border:none;display:flex;align-items:center;gap:6px}
-.inv-nav-close:hover{color:var(--c1)}
+.inv-nav-close{font-size:8.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#FFF;cursor:pointer;background:none;border:none;display:flex;align-items:center;gap:6px}
+.inv-nav-close:hover{color:#999}
 .inv-header{background:var(--c1);padding:52px 48px 44px}
 .inv-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-top:28px}
 .inv-stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:18px 20px}
 .inv-stat-n{font-family:var(--serif);font-size:26px;font-weight:300;color:#FFFFFF;line-height:1;margin-bottom:5px}
 .inv-stat-l{font-size:8.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28)}
-.inv-streams-section{background:var(--cw);padding:56px 48px}
+.inv-streams-section{background:#FFF;padding:56px 48px}
 .inv-streams-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
-.inv-stream{background:var(--c6);padding:24px 20px}
-.inv-stream-n{font-size:8px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--c2);margin-bottom:8px}
-.inv-stream-title{font-family:var(--serif);font-size:18px;font-weight:300;color:var(--c1);margin-bottom:6px}
-.inv-stream-stat{font-size:10px;font-weight:500;color:var(--c2);margin-top:10px;padding-top:8px;border-top:1px solid var(--bdr)}
-.bar-flow{background:var(--c6);border:1px solid var(--bdr);padding:20px 24px;margin-top:3px;display:flex;gap:3px;align-items:stretch;flex-wrap:wrap}
-.bar-flow-in{flex:1;min-width:120px;background:var(--cw);border:1px solid var(--bdr);padding:14px 16px;text-align:center}
+.inv-stream{background:#F5F5F5;border:1px solid #E0E0E0;padding:24px 20px}
+.inv-stream-n{font-size:8px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:8px}
+.inv-stream-title{font-family:var(--serif);font-size:18px;font-weight:300;color:#0A0A0A;margin-bottom:6px}
+.inv-stream-stat{font-size:10px;font-weight:500;color:#0A0A0A;margin-top:10px;padding-top:8px;border-top:1px solid #CCC}
+.bar-flow{background:#F5F5F5;border:1px solid #DDD;padding:20px 24px;margin-top:3px;display:flex;gap:3px;align-items:stretch;flex-wrap:wrap}
+.bar-flow-in{flex:1;min-width:120px;background:#FFF;border:1px solid #DDD;padding:14px 16px;text-align:center}
 .bar-flow-splits{flex:2;min-width:160px;display:flex;flex-direction:column;gap:3px}
 .bar-split{padding:10px 14px;text-align:center}
-.bar-split-still{background:#1A1A1A}
-.bar-split-land{background:var(--c1)}
-.bar-split-brand{background:var(--c4)}
-.bar-flow-fee{flex:1;min-width:120px;background:var(--c1);border:2px solid var(--c3);padding:14px 16px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.bar-split-still{background:#E0E0E0}
+.bar-split-land{background:#CACACA}
+.bar-split-brand{background:#B8B8B8}
+.bar-flow-fee{flex:1;min-width:120px;background:#333;border:2px solid #555;padding:14px 16px;text-align:center;display:flex;flex-direction:column;justify-content:center}
 /* fin model */
-.fin-section{background:var(--c6);padding:56px 48px}
-.scenario-tabs-wrap{display:flex;border:1px solid var(--bdr);overflow:hidden;margin-bottom:3px}
-.sc-tab{flex:1;padding:12px 8px;border:none;cursor:pointer;font-family:var(--sans);font-size:8px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;background:var(--cw);color:var(--c2);transition:all .15s;border-right:1px solid var(--bdr)}
+.fin-section{background:#0A0A0A;padding:56px 48px}
+.scenario-tabs-wrap{display:flex;border:1px solid #333;overflow:hidden;margin-bottom:3px}
+.sc-tab{flex:1;padding:12px 8px;border:none;cursor:pointer;font-family:var(--sans);font-size:8px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;background:#151515;color:#999;transition:all .15s;border-right:1px solid #333}
 .sc-tab:last-child{border-right:none}
 .sc-tab.active{background:var(--c1);color:#FFFFFF}
 .sc-panel{display:none}
 .sc-panel.active{display:block}
 .sc-label-bar{padding:9px 16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:3px}
 .fin-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:3px}
-.fin-table{width:100%;border-collapse:collapse;border:1px solid var(--bdr);min-width:480px}
-.fin-table th{background:var(--c1);color:rgba(255,255,255,.30);font-size:8.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:11px 16px;text-align:left;border-right:1px solid rgba(255,255,255,.06)}
-.fin-table th.hl{color:var(--c5)}
-.fin-table td{padding:10px 16px;font-size:12px;color:var(--cm);border-bottom:1px solid var(--bdr);border-right:1px solid var(--bdr)}
+.fin-table{width:100%;border-collapse:collapse;border:1px solid #333;min-width:480px}
+.fin-table th{background:#1A1A1A;color:#999;font-size:8.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:11px 16px;text-align:left;border-right:1px solid #333}
+.fin-table th.hl{color:#FFF}
+.fin-table td{padding:10px 16px;font-size:12px;color:#BBB;border-bottom:1px solid #222;border-right:1px solid #222}
 .fin-table td:last-child{border-right:none}
-.fin-table td.m{color:var(--c1);font-weight:400}
-.fin-table td.good{background:rgba(210,228,241,.3);color:var(--c1);font-weight:500}
+.fin-table td.m{color:#FFF;font-weight:400}
+.fin-table td.good{background:#222;color:#FFF;font-weight:500}
 .fin-table tr:last-child td{border-bottom:none}
-.fin-table tr.sec-head td{background:rgba(245,249,253,.6);font-size:8px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--c2);padding:8px 16px}
-.fin-table tr.total-row td{background:var(--c1);font-family:var(--serif);font-size:15px;font-weight:300;color:#FFFFFF;padding:13px 16px}
-.fin-table tr.total-row td.num{color:var(--c5);font-size:17px}
-.fin-table tr.total-row td.green{color:#CCCCCC;font-size:17px}
-.fin-table tr.margin-row td{background:var(--c1);border-top:1px solid rgba(255,255,255,.08);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,249,253,.26);padding:9px 16px}
-.fin-table tr.margin-row td.v{font-family:var(--serif);font-size:13px;color:var(--c3);letter-spacing:0;text-transform:none;font-weight:300}
+.fin-table tr.sec-head td{background:#1A1A1A;font-size:8px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#666;padding:8px 16px}
+.fin-table tr.total-row td{background:#2A2A2A;font-family:var(--serif);font-size:15px;font-weight:300;color:#FFF;padding:13px 16px;border-top:1px solid #444}
+.fin-table tr.total-row td.num{color:#EEE;font-size:17px}
+.fin-table tr.total-row td.green{color:#FFF;font-size:17px;font-weight:500}
+.fin-table tr.margin-row td{background:#1A1A1A;border-top:1px solid #333;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#666;padding:9px 16px}
+.fin-table tr.margin-row td.v{font-family:var(--serif);font-size:13px;color:#FFF;letter-spacing:0;text-transform:none;font-weight:300}
 .summary-3{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:3px}
 .sum-card{padding:20px}
-.sum-card.l{background:var(--c6);border:1px solid var(--bdr)}
-.sum-card.m{background:var(--c5)}
-.sum-card.h{background:var(--c1)}
+.sum-card.l{background:#151515;border:1px solid #333}
+.sum-card.m{background:#1A1A1A}
+.sum-card.h{background:#2A2A2A}
 .sum-lbl{font-size:8px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px}
-.sum-card.l .sum-lbl,.sum-card.m .sum-lbl{color:var(--c2)}
+.sum-card.l .sum-lbl,.sum-card.m .sum-lbl{color:#999}
 .sum-card.h .sum-lbl{color:rgba(255,255,255,.38)}
 .sum-num{font-family:var(--serif);font-size:clamp(24px,3vw,30px);font-weight:300;line-height:1}
-.sum-card.l .sum-num,.sum-card.m .sum-num{color:var(--c1)}
+.sum-card.l .sum-num,.sum-card.m .sum-num{color:#FFF}
 .sum-card.h .sum-num{color:#FFFFFF}
 .sum-sub{font-size:11px;margin-top:6px;line-height:1.5}
-.sum-card.l .sum-sub,.sum-card.m .sum-sub{color:var(--cm)}
+.sum-card.l .sum-sub,.sum-card.m .sum-sub{color:#BBB}
 .sum-card.h .sum-sub{color:rgba(255,255,255,.42)}
 /* investors */
-.inv-targets-section{background:var(--c6);padding:56px 48px}
+.inv-targets-section{background:#FFF;padding:56px 48px}
 .inv-targets-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:28px}
-.inv-target-card{background:var(--cw);padding:24px 20px;border:1px solid var(--bdr)}
-.inv-target-cat{font-size:8px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--c2);margin-bottom:7px}
-.inv-target-name{font-family:var(--serif);font-size:17px;font-weight:400;color:var(--c1);margin-bottom:6px}
-.inv-target-why{margin-top:10px;padding-top:8px;border-top:1px solid var(--bdr);font-size:11px;font-style:italic;font-family:var(--serif);color:var(--c2)}
+.inv-target-card{background:#F5F5F5;padding:24px 20px;border:1px solid #DDD}
+.inv-target-cat{font-size:8px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:7px}
+.inv-target-name{font-family:var(--serif);font-size:17px;font-weight:400;color:#0A0A0A;margin-bottom:6px}
+.inv-target-why{margin-top:10px;padding-top:8px;border-top:1px solid #DDD;font-size:11px;font-style:italic;font-family:var(--serif);color:#666}
 .cur-investors{display:flex;flex-wrap:wrap;gap:3px;margin-top:24px}
-.cur-inv-badge{background:var(--c1);padding:12px 20px}
-.cur-inv-name{font-family:var(--serif);font-size:14px;font-weight:300;color:#FFFFFF}
-.cur-inv-role{font-size:8px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:3px}
+.cur-inv-badge{background:#F0F0F0;border:1px solid #E0E0E0;padding:12px 20px}
+.cur-inv-name{font-family:var(--serif);font-size:14px;font-weight:300;color:#0A0A0A}
+.cur-inv-role{font-size:8px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#999;margin-top:3px}
 .inv-cta-section{background:var(--c1);padding:64px 48px}
 .inv-cta-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end}
 .inv-terms-box{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:24px}
@@ -533,18 +532,16 @@ body.portal-open .site-footer{display:none!important}
   .card,.card-w,.card-inv{padding:26px 20px}
   .loc-banner{padding:10px 16px;flex-direction:column;align-items:flex-start;gap:8px}
   .loc-text{font-size:7.5px}
-  .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-l{padding:32px 16px 28px}
-  .hero-eyebrow{margin-bottom:14px}
-  .hero-sub{margin-top:12px;max-width:100%}
-  .hero-price-box{margin-top:20px;padding:16px 18px;max-width:100%}
+  .hero{min-height:auto}
+  .hero-l{padding:48px 16px 32px}
+  .hero-sub{max-width:100%}
+  .hero-price-box{width:100%;max-width:100%}
   .hero-price-val{font-size:32px}
-  .hero-actions{flex-direction:column;gap:8px;margin-top:18px}
+  .hero-actions{flex-direction:column;gap:8px}
   .hero-actions .btn{width:100%;padding:14px}
-  .hero-r{min-height:200px;padding:20px 16px}
-  .hero-wm{font-size:180px;top:-12px;left:-6px}
-  .hero-panel{padding:11px 14px}
-  .hero-panel-r{font-size:16px}
+  .hero-panels{grid-template-columns:1fr 1fr}
+  .hero-panel{padding:16px}
+  .hero-panel-r{font-size:18px}
   .what-section{padding:36px 16px}
   .what-inner{grid-template-columns:1fr;gap:10px}
   .what-q{font-size:clamp(13px,4vw,17px)}
@@ -706,34 +703,26 @@ body.portal-open .site-footer{display:none!important}
   </div>
 
   <div class="hero">
+    <div class="hero-wm">S</div>
     <div class="hero-l">
-      <div class="hero-eyebrow"><div class="hero-eyebrow-dot"></div><span class="hero-eyebrow-text">Advanced Longevity · On Demand · Near You</span></div>
+      <div class="hero-eyebrow"><span class="hero-eyebrow-text">Advanced Longevity · On Demand · Near You</span></div>
       <h1 class="t-h1-hero">The most advanced<br>biohacking tools.<br><span class="em">On your high street.</span></h1>
       <p class="t-body hero-sub">The protocols elite athletes and longevity scientists have used for years — now available everywhere, for the price of what you spend on coffee.</p>
-      <div class="hero-price-box">
-        <div class="hero-price-label">Still Access from</div>
-        <div class="hero-price-val">£199<span style="font-size:18px;color:var(--cm)">/mo</span></div>
-        <div class="hero-price-note">Less than your morning coffee. Better than a gym.</div>
-      </div>
       <div class="hero-actions">
-        <a href="#membership" class="btn btn-dark">Join Still</a>
-        <a href="#tools" class="btn btn-sky">What's Inside</a>
+        <a href="#membership" class="btn" style="background:transparent;border:1px solid #FFF;color:#FFF">Join Still</a>
       </div>
     </div>
-    <div class="hero-r">
-      <div class="hero-wm">S</div>
-      <div class="hero-panels">
-        <div class="hero-panel"><span class="hero-panel-l" style="color:#999">Protocols available</span><span class="hero-panel-r" style="color:#FFF">12 tools</span></div>
-        <div class="hero-panel"><span class="hero-panel-l" style="color:#999">First location</span><span class="hero-panel-r" style="color:#FFF">Wimbledon Village</span></div>
-        <div class="hero-panel"><span class="hero-panel-l" style="color:#999">Avg. session time</span><span class="hero-panel-r" style="color:#FFF">Under 20 mins</span></div>
-        <div class="hero-panel"><span class="hero-panel-l" style="color:#999">Target scale</span><span class="hero-panel-r" style="color:#FFF">As common as Starbucks</span></div>
-      </div>
+    <div class="hero-panels">
+      <div class="hero-panel"><span class="hero-panel-l">Protocols available</span><span class="hero-panel-r">12 tools</span></div>
+      <div class="hero-panel"><span class="hero-panel-l">First location</span><span class="hero-panel-r">Wimbledon Village</span></div>
+      <div class="hero-panel"><span class="hero-panel-l">Avg. session time</span><span class="hero-panel-r">Under 20 mins</span></div>
+      <div class="hero-panel"><span class="hero-panel-l">Target scale</span><span class="hero-panel-r">As common as Starbucks</span></div>
     </div>
   </div>
 
-  <div class="what-section inv">
+  <div class="what-section">
     <div class="what-inner">
-      <span class="t-label t-label-inv">What is Still</span>
+      <span class="t-label">What is Still</span>
       <p class="what-q">The best longevity tools — IV therapy, red light, cold plunge, NAD+ — have always existed. They just cost thousands and required a waiting list. <strong>Still changes that. Walk in. No appointment. The price of a coffee.</strong></p>
     </div>
   </div>
@@ -780,16 +769,16 @@ body.portal-open .site-footer{display:none!important}
     </div>
   </div>
 
-  <div class="scale-section section">
+  <div class="scale-section section inv">
     <span class="t-label" style="margin-bottom:12px">The Vision</span>
     <h2 class="t-h2" style="margin-bottom:32px">As common as <span class="em">your morning coffee.</span></h2>
     <div class="scale-inner">
       <div>
         <div class="scale-big">10,000<span>+</span></div>
-        <p class="t-body" style="margin-top:14px;max-width:360px">Starbucks locations in the UK and Europe. That's Still's ambition. Not a niche clinic. <strong style="color:var(--c1)">Infrastructure. Everywhere you already are.</strong></p>
+        <p class="t-body" style="margin-top:14px;max-width:360px">Starbucks locations in the UK and Europe. That's Still's ambition. Not a niche clinic. <strong style="color:#FFF">Infrastructure. Everywhere you already are.</strong></p>
         <div class="scale-coffee-box">
           <div class="scale-coffee-label">The coffee trade-off</div>
-          <p style="font-family:var(--serif);font-size:17px;font-weight:300;color:var(--c1);line-height:1.5">The average UK adult spends <em style="color:var(--c2)">£1,400/yr</em> on coffee. Still costs less. And it extends your life.</p>
+          <p style="font-family:var(--serif);font-size:17px;font-weight:300;color:#FFF;line-height:1.5">The average UK adult spends <em style="color:var(--c2)">£1,400/yr</em> on coffee. Still costs less. And it extends your life.</p>
         </div>
       </div>
       <div class="scale-rows">
@@ -812,8 +801,8 @@ body.portal-open .site-footer{display:none!important}
         <div class="loc-cap-note">⚑ Membership strictly capped at launch — register to secure your place</div>
       </div>
       <div class="loc-card-right">
-        <p style="font-size:12px;color:rgba(255,255,255,.40);margin-bottom:14px;line-height:1.6">More locations across London and the UK throughout 2025.</p>
-        <a href="#membership" class="btn btn-light">Register Now</a>
+        <p style="font-size:12px;color:#666;margin-bottom:14px;line-height:1.6">More locations across London and the UK throughout 2025.</p>
+        <a href="#membership" class="btn btn-dark">Register Now</a>
       </div>
     </div>
   </div>
@@ -830,14 +819,14 @@ body.portal-open .site-footer{display:none!important}
       <p style="font-size:12px;font-style:italic;font-family:var(--serif);color:rgba(255,255,255,.45);max-width:300px">Register now to guarantee your founding membership place.</p>
     </div>
 
-    <div style="padding:32px 48px 0;background:var(--c7)">
+    <div style="padding:32px 48px 0;background:#0A0A0A">
       <div class="billing-toggle" id="billingToggle">
         <button class="billing-btn active" id="btnMonthly" onclick="setBilling('monthly')">Monthly</button>
         <button class="billing-btn" id="btnAnnual" onclick="setBilling('annual')">Annual <span class="save-badge">SAVE 20%</span></button>
       </div>
     </div>
 
-    <div style="padding:0 48px;background:var(--c7)">
+    <div style="padding:0 48px;background:#0A0A0A">
       <div class="mem-cards">
         <div class="mem-card mem-card-access">
           <div class="mem-bg">A</div>
@@ -855,7 +844,7 @@ body.portal-open .site-footer{display:none!important}
             <li>Early access to new locations and protocols</li>
             <li>Founding member rate — locked for life</li>
           </ul>
-          <a id="accessBtn" href="https://buy.stripe.com/bJe14o5A04GO1SveP84gg0r" target="_blank" rel="noopener" class="btn btn-dark btn-full">Pre-Register — Still Access</a>
+          <a id="accessBtn" href="https://buy.stripe.com/bJe14o5A04GO1SveP84gg0r" target="_blank" rel="noopener" class="btn btn-full" style="background:#333;color:#FFF">Pre-Register — Still Access</a>
           <div class="mem-cap">⚑ 75 founding places only at Wimbledon Village</div>
         </div>
         <div class="mem-card mem-card-chrome">
@@ -876,18 +865,18 @@ body.portal-open .site-footer{display:none!important}
             <li>Two guest passes per month</li>
             <li>Founding member rate — locked for life</li>
           </ul>
-          <a id="chromeBtn" href="https://buy.stripe.com/5kQcN61jK5KSap1eP84gg0s" target="_blank" rel="noopener" class="btn btn-light btn-full">Pre-Register — Still Chrome</a>
+          <a id="chromeBtn" href="https://buy.stripe.com/5kQcN61jK5KSap1eP84gg0s" target="_blank" rel="noopener" class="btn btn-full" style="background:#333;color:#FFF">Pre-Register — Still Chrome</a>
           <div class="mem-cap">⚑ Chrome strictly capped at 25 founding members</div>
         </div>
       </div>
     </div>
 
-    <div style="padding:0 48px 40px;background:var(--c7)">
+    <div style="padding:0 48px 40px;background:#0A0A0A">
       <div class="proration-note">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         <div>
-          <div style="font-size:8.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--c2);margin-bottom:5px">Pre-Registration · How it works</div>
-          <p class="t-small">Your card is registered today to secure your place. <strong style="color:var(--c1)">Your membership fee will be adjusted to account for the time the club has been open</strong> — so if Still Lounge opens on 5 May and you join now, you only pay for the days you've had access. Founding member rate then locked for the life of your membership.</p>
+          <div style="font-size:8.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#999;margin-bottom:5px">Pre-Registration · How it works</div>
+          <p class="t-small" style="color:#FFF">Your card is registered today to secure your place. <strong style="color:#FFF">Your membership fee will be adjusted to account for the time the club has been open</strong> — so if Still Lounge opens on 5 May and you join now, you only pay for the days you've had access. Founding member rate then locked for the life of your membership.</p>
         </div>
       </div>
     </div>
@@ -898,14 +887,14 @@ body.portal-open .site-footer{display:none!important}
 
 <!-- PAGE 2 — PARTNERS -->
 <div class="page" id="page-partners">
-  <div class="p-hero">
+  <div class="p-hero inv">
     <div>
       <span class="t-label" style="margin-bottom:12px">Brand Partnership Programme</span>
       <h1 class="t-h1">Expand without <span class="em">the usual risk.</span></h1>
       <p class="t-body" style="margin-top:18px;max-width:440px">Still gives wellness and performance brands access to the most health-conscious consumers in the UK — embedded in high-footfall venues, without the cost of a standalone site.</p>
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:28px">
-        <a href="#p-register" class="btn btn-dark">Register Interest</a>
-        <a href="#why-still" class="btn btn-outline">Why It Works</a>
+        <a href="#p-register" class="btn btn-light">Register Interest</a>
+        <a href="#why-still" class="btn btn-ghost-inv">Why It Works</a>
       </div>
     </div>
     <div class="p-stats-box">
@@ -950,7 +939,7 @@ body.portal-open .site-footer{display:none!important}
     </div>
   </div>
 
-  <div class="rets-section section">
+  <div class="rets-section section inv">
     <span class="t-label" style="margin-bottom:12px">Return Comparison</span>
     <h2 class="t-h2" style="margin-bottom:28px">Year one, <span class="em">side by side.</span></h2>
     <div class="rets-grid">
@@ -1015,7 +1004,7 @@ body.portal-open .site-footer{display:none!important}
     </div>
   </div>
 
-  <div class="l-econ-section section">
+  <div class="l-econ-section section inv">
     <span class="t-label" style="margin-bottom:12px">Your Earnings</span>
     <h2 class="t-h2" style="margin-bottom:8px">What your space <span class="em">could generate.</span></h2>
     <p class="t-body" style="margin-bottom:28px;max-width:580px">Three revenue streams. All costs (rent, staff, rates, utilities) still belong to you — but the Still model generates income that no conventional tenancy comes close to.</p>
@@ -1053,9 +1042,9 @@ body.portal-open .site-footer{display:none!important}
       </table>
     </div>
     <div class="l-econ-summary">
-      <p style="font-family:var(--serif);font-size:18px;font-weight:300;color:var(--c1);line-height:1.5">You invest in the space. <em style="color:var(--c2)">Still builds the business inside it.</em></p>
+      <p style="font-family:var(--serif);font-size:18px;font-weight:300;color:#FFF;line-height:1.5">You invest in the space. <em style="color:var(--c2)">Still builds the business inside it.</em></p>
       <p class="t-small">No operational complexity. No brand management. No staffing headaches. Just a defined zone and a premium wellness business on your behalf.</p>
-      <a href="#l-contact" class="btn btn-dark">Request a Proposal</a>
+      <a href="#l-contact" class="btn btn-light">Request a Proposal</a>
     </div>
   </div>
 
@@ -1098,17 +1087,17 @@ body.portal-open .site-footer{display:none!important}
     </div>
   </div>
 
-  <div class="l-cta-section inv" id="l-contact">
+  <div class="l-cta-section" id="l-contact">
     <div class="l-cta-inner">
-      <h2 class="t-h2 inv">Ready to turn your space into a <span class="em">Still venue?</span></h2>
+      <h2 class="t-h2">Ready to turn your space into a <span class="em">Still venue?</span></h2>
       <div>
-        <p class="t-body inv" style="margin-bottom:22px">We work with a curated selection of venue partners across the UK and Dubai. If your space is well-located and your audience is health-minded — we'd like to hear from you.</p>
+        <p class="t-body" style="margin-bottom:22px">We work with a curated selection of venue partners across the UK and Dubai. If your space is well-located and your audience is health-minded — we'd like to hear from you.</p>
         <div class="l-cta-links">
           <a href="/cdn-cgi/l/email-protection#5b333e3737341b282f323737753734353f3435"><span class="__cf_email__" data-cfemail="4f272a2323200f3c3b262323612320212b2021">[email&#160;protected]</span></a>
         </div>
         <div class="cta-btns">
           <a href="/cdn-cgi/l/email-protection#08606d646467487b7c616464266467666c6766" class="btn btn-light">Start the Conversation</a>
-          <button class="btn btn-ghost-inv" onclick="showPage('partners')">Partner Info</button>
+          <button class="btn btn-outline" onclick="showPage('partners')">Partner Info</button>
         </div>
       </div>
     </div>
@@ -1176,11 +1165,11 @@ body.portal-open .site-footer{display:none!important}
     <h2 class="t-h2" style="margin-bottom:10px">Six revenue streams. <span class="em">Zero site-level cost.</span></h2>
     <p class="t-body" style="margin-bottom:24px;max-width:600px">Landlord carries all site costs. Still's only costs are central overhead — which scales slowly while revenue grows linearly per new site.</p>
     <div class="bar-flow" style="margin-bottom:20px">
-      <div class="bar-flow-in"><div style="font-family:var(--serif);font-size:16px;font-weight:300;color:var(--c1);margin-bottom:4px">Gross Bar Sales</div><div style="font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--cm)">e.g. £438k/site/yr (mid)</div></div>
+      <div class="bar-flow-in"><div style="font-family:var(--serif);font-size:16px;font-weight:300;color:#0A0A0A;margin-bottom:4px">Gross Bar Sales</div><div style="font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#666">e.g. £438k/site/yr (mid)</div></div>
       <div class="bar-flow-splits">
-        <div class="bar-split bar-split-still"><div style="font-family:var(--serif);font-size:14px;font-weight:300;color:#CCCCCC">10% → Still</div><div style="font-size:8px;color:rgba(255,255,255,.42)">~£43,800/yr</div></div>
-        <div class="bar-split bar-split-land"><div style="font-family:var(--serif);font-size:14px;font-weight:300;color:var(--c5)">35% → Landlord</div><div style="font-size:8px;color:rgba(255,255,255,.42)">~£153,300/yr</div></div>
-        <div class="bar-split bar-split-brand"><div style="font-family:var(--serif);font-size:14px;font-weight:300;color:var(--c1)">55% → Brand Partner</div><div style="font-size:8px;color:var(--c1);opacity:.6">Jenki / Blank Street retain</div></div>
+        <div class="bar-split bar-split-still"><div style="font-family:var(--serif);font-size:14px;font-weight:300;color:#333">10% → Still</div><div style="font-size:8px;color:#666">~£43,800/yr</div></div>
+        <div class="bar-split bar-split-land"><div style="font-family:var(--serif);font-size:14px;font-weight:300;color:#222">35% → Landlord</div><div style="font-size:8px;color:#555">~£153,300/yr</div></div>
+        <div class="bar-split bar-split-brand"><div style="font-family:var(--serif);font-size:14px;font-weight:300;color:#111">55% → Brand Partner</div><div style="font-size:8px;color:#444">Jenki / Blank Street retain</div></div>
       </div>
       <div class="bar-flow-fee"><div style="font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:6px">Still also charges</div><div style="font-family:var(--serif);font-size:15px;font-weight:300;color:#FFFFFF;margin-bottom:3px">Network Fee</div><div style="font-family:var(--serif);font-size:20px;font-weight:300;color:var(--c5)">£18k/brand/site</div><div style="font-size:8px;color:rgba(255,255,255,.30);margin-top:3px">Fixed · from site 3</div></div>
     </div>
@@ -1194,33 +1183,33 @@ body.portal-open .site-footer{display:none!important}
     </div>
   </div>
 
-  <div class="fin-section">
+  <div class="fin-section inv">
     <span class="t-label" style="margin-bottom:12px;display:block">Financial Model — 24-Month Rollout</span>
     <h2 class="t-h2" style="margin-bottom:8px">Three scenarios. <span class="em">2 · 20 · 100 sites.</span></h2>
     <p class="t-body" style="margin-bottom:24px;max-width:600px">50/50 membership split (Access £199 / Chrome £499). 8 visits/member/month. Sites 1–2: partner fees waived. 10% bar override from site 1. Central costs are the only costs Still bears.</p>
 
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-bottom:16px">
-      <div class="card-w" style="padding:16px 18px"><div style="font-size:8px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--c2);margin-bottom:5px">Membership</div><div style="font-family:var(--serif);font-size:18px;font-weight:300;color:var(--c1)">50 / 50</div><div style="font-size:11px;color:var(--cm);margin-top:2px">Access £199 · Chrome £499</div></div>
-      <div class="card-w" style="padding:16px 18px"><div style="font-size:8px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--c2);margin-bottom:5px">Visits</div><div style="font-family:var(--serif);font-size:18px;font-weight:300;color:var(--c1)">8/mo</div><div style="font-size:11px;color:var(--cm);margin-top:2px">Per member average</div></div>
-      <div class="card-w" style="padding:16px 18px"><div style="font-size:8px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--c2);margin-bottom:5px">Bar Override</div><div style="font-family:var(--serif);font-size:18px;font-weight:300;color:var(--c1)">10%</div><div style="font-size:11px;color:var(--cm);margin-top:2px">Of gross bar revenue</div></div>
-      <div class="card-w" style="padding:16px 18px"><div style="font-size:8px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--c2);margin-bottom:5px">Partner Fees</div><div style="font-family:var(--serif);font-size:18px;font-weight:300;color:var(--c1)">£0→£18k</div><div style="font-size:11px;color:var(--cm);margin-top:2px">Sites 1–2 free · £18k from 3</div></div>
+      <div style="background:#0A0A0A;border:1px solid #222;padding:16px 18px"><div style="font-size:8px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#999;margin-bottom:5px">Membership</div><div style="font-family:var(--serif);font-size:18px;font-weight:300;color:#FFF">50 / 50</div><div style="font-size:11px;color:#BBB;margin-top:2px">Access £199 · Chrome £499</div></div>
+      <div style="background:#0A0A0A;border:1px solid #222;padding:16px 18px"><div style="font-size:8px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#999;margin-bottom:5px">Visits</div><div style="font-family:var(--serif);font-size:18px;font-weight:300;color:#FFF">8/mo</div><div style="font-size:11px;color:#BBB;margin-top:2px">Per member average</div></div>
+      <div style="background:#0A0A0A;border:1px solid #222;padding:16px 18px"><div style="font-size:8px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#999;margin-bottom:5px">Bar Override</div><div style="font-family:var(--serif);font-size:18px;font-weight:300;color:#FFF">10%</div><div style="font-size:11px;color:#BBB;margin-top:2px">Of gross bar revenue</div></div>
+      <div style="background:#0A0A0A;border:1px solid #222;padding:16px 18px"><div style="font-size:8px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#999;margin-bottom:5px">Partner Fees</div><div style="font-family:var(--serif);font-size:18px;font-weight:300;color:#FFF">£0→£18k</div><div style="font-size:11px;color:#BBB;margin-top:2px">Sites 1–2 free · £18k from 3</div></div>
     </div>
 
     <div class="scenario-tabs-wrap"><button class="sc-tab active" data-sc="low" onclick="switchScenario(this)">Low · 50 members/site</button><button class="sc-tab" data-sc="mid" onclick="switchScenario(this)">Mid · 75 members/site</button><button class="sc-tab" data-sc="high" onclick="switchScenario(this)">High · 100 members (cap)</button></div>
 
     <div class="sc-panel active" id="sc-low">
-      <div class="sc-label-bar" style="background:var(--cm)"><span style="font-size:8.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.8)">Low · 50 members/site · 25 Access + 25 Chrome · £260k rev/site/yr</span></div>
-      <div class="fin-table-wrap"><table class="fin-table"><thead><tr><th style="min-width:200px">Low · 50 members/site</th><th>2 Sites</th><th>20 Sites</th><th class="hl">100 Sites</th></tr></thead><tbody><tr class="sec-head"><td colspan="4">Network</td></tr><tr><td class="m">Total members</td><td>100</td><td>1,000</td><td class="good">5,000</td></tr><tr class="sec-head"><td colspan="4">Revenue</td></tr><tr><td class="m">Still Access — 25/site × £199 × 12</td><td>£59,700</td><td>£597,000</td><td class="good">£2,985,000</td></tr><tr><td class="m">Still Chrome — 25/site × £499 × 12</td><td>£149,700</td><td>£1,497,000</td><td class="good">£7,485,000</td></tr><tr><td class="m" style="font-weight:500">Total membership</td><td style="font-weight:500">£209,400</td><td style="font-weight:500">£2,094,000</td><td class="good" style="font-weight:600">£10,470,000</td></tr><tr><td class="m">Bar override 10% (100 drinks/day)</td><td>£58,400</td><td>£292,000</td><td class="good">£1,460,000</td></tr><tr><td class="m">Merchandise 70% margin</td><td>£21,000</td><td>£105,000</td><td class="good">£525,000</td></tr><tr><td class="m">Events 30% programming fee</td><td>£12,000</td><td>£60,000</td><td class="good">£300,000</td></tr><tr><td class="m">Brand activations</td><td>£10,000</td><td>£100,000</td><td class="good">£500,000</td></tr><tr><td class="m">Partner fees (£0 sites 1–2)</td><td style="color:#999;font-size:11px">£0 waived</td><td>£324,000</td><td class="good">£1,764,000</td></tr><tr><td class="m">Technology licensing</td><td style="color:#999">—</td><td>£90,000</td><td class="good">£750,000</td></tr><tr style="background:var(--c5)"><td style="font-weight:700;color:var(--c1);padding:10px 16px">Total Revenue</td><td style="font-weight:600;color:var(--c1);padding:10px 16px">£310,800</td><td style="font-weight:600;color:var(--c1);padding:10px 16px">£3,065,000</td><td style="font-weight:700;color:var(--c1);padding:10px 16px;font-size:13px">£15,769,000</td></tr><tr class="sec-head"><td colspan="4">Still Central Costs Only</td></tr><tr><td class="m">Ops · Tech · Marketing · Training · G&amp;A</td><td>–£320,000</td><td>–£1,100,000</td><td>–£3,200,000</td></tr><tr class="total-row"><td>Net to Still — Low</td><td class="num" style="font-size:13px">–£9,200</td><td class="num">£1,965,000</td><td class="green">£12,569,000</td></tr><tr class="margin-row"><td>Net Margin</td><td class="v">—</td><td class="v">64%</td><td class="v">80%</td></tr></tbody></table></div>
+      <div class="sc-label-bar" style="background:#333"><span style="font-size:8.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.8)">Low · 50 members/site · 25 Access + 25 Chrome · £260k rev/site/yr</span></div>
+      <div class="fin-table-wrap"><table class="fin-table"><thead><tr><th style="min-width:200px">Low · 50 members/site</th><th>2 Sites</th><th>20 Sites</th><th class="hl">100 Sites</th></tr></thead><tbody><tr class="sec-head"><td colspan="4">Network</td></tr><tr><td class="m">Total members</td><td>100</td><td>1,000</td><td class="good">5,000</td></tr><tr class="sec-head"><td colspan="4">Revenue</td></tr><tr><td class="m">Still Access — 25/site × £199 × 12</td><td>£59,700</td><td>£597,000</td><td class="good">£2,985,000</td></tr><tr><td class="m">Still Chrome — 25/site × £499 × 12</td><td>£149,700</td><td>£1,497,000</td><td class="good">£7,485,000</td></tr><tr><td class="m" style="font-weight:500">Total membership</td><td style="font-weight:500">£209,400</td><td style="font-weight:500">£2,094,000</td><td class="good" style="font-weight:600">£10,470,000</td></tr><tr><td class="m">Bar override 10% (100 drinks/day)</td><td>£58,400</td><td>£292,000</td><td class="good">£1,460,000</td></tr><tr><td class="m">Merchandise 70% margin</td><td>£21,000</td><td>£105,000</td><td class="good">£525,000</td></tr><tr><td class="m">Events 30% programming fee</td><td>£12,000</td><td>£60,000</td><td class="good">£300,000</td></tr><tr><td class="m">Brand activations</td><td>£10,000</td><td>£100,000</td><td class="good">£500,000</td></tr><tr><td class="m">Partner fees (£0 sites 1–2)</td><td style="color:#999;font-size:11px">£0 waived</td><td>£324,000</td><td class="good">£1,764,000</td></tr><tr><td class="m">Technology licensing</td><td style="color:#999">—</td><td>£90,000</td><td class="good">£750,000</td></tr><tr style="background:#333"><td style="font-weight:700;color:#FFF;padding:10px 16px">Total Revenue</td><td style="font-weight:600;color:#FFF;padding:10px 16px">£310,800</td><td style="font-weight:600;color:var(--c1);padding:10px 16px">£3,065,000</td><td style="font-weight:700;color:#FFF;padding:10px 16px;font-size:13px">£15,769,000</td></tr><tr class="sec-head"><td colspan="4">Still Central Costs Only</td></tr><tr><td class="m">Ops · Tech · Marketing · Training · G&amp;A</td><td>–£320,000</td><td>–£1,100,000</td><td>–£3,200,000</td></tr><tr class="total-row"><td>Net to Still — Low</td><td class="num" style="font-size:13px">–£9,200</td><td class="num">£1,965,000</td><td class="green">£12,569,000</td></tr><tr class="margin-row"><td>Net Margin</td><td class="v">—</td><td class="v">64%</td><td class="v">80%</td></tr></tbody></table></div>
     </div>
 
     <div class="sc-panel" id="sc-mid">
-      <div class="sc-label-bar" style="background:var(--c2)"><span style="font-size:8.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.9)">Mid · 75 members/site · 38 Access + 37 Chrome · £397k rev/site/yr</span></div>
-      <div class="fin-table-wrap"><table class="fin-table"><thead><tr><th style="min-width:200px">Mid · 75 members/site</th><th>2 Sites</th><th>20 Sites</th><th class="hl">100 Sites</th></tr></thead><tbody><tr class="sec-head"><td colspan="4">Network</td></tr><tr><td class="m">Total members</td><td>150</td><td>1,500</td><td class="good">7,500</td></tr><tr class="sec-head"><td colspan="4">Revenue</td></tr><tr><td class="m">Still Access — 38/site × £199 × 12</td><td>£181,296</td><td>£906,480</td><td class="good">£4,532,400</td></tr><tr><td class="m">Still Chrome — 37/site × £499 × 12</td><td>£443,304</td><td>£2,216,520</td><td class="good">£11,082,600</td></tr><tr><td class="m" style="font-weight:500">Total membership</td><td style="font-weight:500">£624,600</td><td style="font-weight:500">£3,123,000</td><td class="good" style="font-weight:600">£15,615,000</td></tr><tr><td class="m">Bar override 10% (150 drinks/day)</td><td>£87,600</td><td>£438,000</td><td class="good">£2,190,000</td></tr><tr><td class="m">Merchandise 70% margin</td><td>£37,800</td><td>£189,000</td><td class="good">£945,000</td></tr><tr><td class="m">Events 30% programming fee</td><td>£18,000</td><td>£90,000</td><td class="good">£450,000</td></tr><tr><td class="m">Brand activations</td><td>£24,000</td><td>£240,000</td><td class="good">£1,200,000</td></tr><tr><td class="m">Partner fees (£0 sites 1–2)</td><td style="color:#999;font-size:11px">£0 waived</td><td>£324,000</td><td class="good">£1,764,000</td></tr><tr><td class="m">Technology licensing</td><td style="color:#999">—</td><td>£150,000</td><td class="good">£1,000,000</td></tr><tr style="background:var(--c5)"><td style="font-weight:700;color:var(--c1);padding:10px 16px">Total Revenue</td><td style="font-weight:600;color:var(--c1);padding:10px 16px">£792,000</td><td style="font-weight:600;color:var(--c1);padding:10px 16px">£4,554,000</td><td style="font-weight:700;color:var(--c1);padding:10px 16px;font-size:13px">£23,164,000</td></tr><tr class="sec-head"><td colspan="4">Still Central Costs Only</td></tr><tr><td class="m">Ops · Tech · Marketing · Training · G&amp;A</td><td>–£320,000</td><td>–£1,300,000</td><td>–£3,800,000</td></tr><tr class="total-row"><td>Net to Still — Mid</td><td class="num">£472,000</td><td class="num">£3,254,000</td><td class="green">£19,364,000</td></tr><tr class="margin-row"><td>Net Margin</td><td class="v">60%</td><td class="v">71%</td><td class="v">84%</td></tr></tbody></table></div>
+      <div class="sc-label-bar" style="background:#555"><span style="font-size:8.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.9)">Mid · 75 members/site · 38 Access + 37 Chrome · £397k rev/site/yr</span></div>
+      <div class="fin-table-wrap"><table class="fin-table"><thead><tr><th style="min-width:200px">Mid · 75 members/site</th><th>2 Sites</th><th>20 Sites</th><th class="hl">100 Sites</th></tr></thead><tbody><tr class="sec-head"><td colspan="4">Network</td></tr><tr><td class="m">Total members</td><td>150</td><td>1,500</td><td class="good">7,500</td></tr><tr class="sec-head"><td colspan="4">Revenue</td></tr><tr><td class="m">Still Access — 38/site × £199 × 12</td><td>£181,296</td><td>£906,480</td><td class="good">£4,532,400</td></tr><tr><td class="m">Still Chrome — 37/site × £499 × 12</td><td>£443,304</td><td>£2,216,520</td><td class="good">£11,082,600</td></tr><tr><td class="m" style="font-weight:500">Total membership</td><td style="font-weight:500">£624,600</td><td style="font-weight:500">£3,123,000</td><td class="good" style="font-weight:600">£15,615,000</td></tr><tr><td class="m">Bar override 10% (150 drinks/day)</td><td>£87,600</td><td>£438,000</td><td class="good">£2,190,000</td></tr><tr><td class="m">Merchandise 70% margin</td><td>£37,800</td><td>£189,000</td><td class="good">£945,000</td></tr><tr><td class="m">Events 30% programming fee</td><td>£18,000</td><td>£90,000</td><td class="good">£450,000</td></tr><tr><td class="m">Brand activations</td><td>£24,000</td><td>£240,000</td><td class="good">£1,200,000</td></tr><tr><td class="m">Partner fees (£0 sites 1–2)</td><td style="color:#999;font-size:11px">£0 waived</td><td>£324,000</td><td class="good">£1,764,000</td></tr><tr><td class="m">Technology licensing</td><td style="color:#999">—</td><td>£150,000</td><td class="good">£1,000,000</td></tr><tr style="background:#333"><td style="font-weight:700;color:#FFF;padding:10px 16px">Total Revenue</td><td style="font-weight:600;color:#FFF;padding:10px 16px">£792,000</td><td style="font-weight:600;color:var(--c1);padding:10px 16px">£4,554,000</td><td style="font-weight:700;color:#FFF;padding:10px 16px;font-size:13px">£23,164,000</td></tr><tr class="sec-head"><td colspan="4">Still Central Costs Only</td></tr><tr><td class="m">Ops · Tech · Marketing · Training · G&amp;A</td><td>–£320,000</td><td>–£1,300,000</td><td>–£3,800,000</td></tr><tr class="total-row"><td>Net to Still — Mid</td><td class="num">£472,000</td><td class="num">£3,254,000</td><td class="green">£19,364,000</td></tr><tr class="margin-row"><td>Net Margin</td><td class="v">60%</td><td class="v">71%</td><td class="v">84%</td></tr></tbody></table></div>
     </div>
 
     <div class="sc-panel" id="sc-high">
-      <div class="sc-label-bar" style="background:var(--c1)"><span style="font-size:8.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.85)">High · 100 members/site · Fully Subscribed · £547k rev/site/yr</span></div>
-      <div class="fin-table-wrap"><table class="fin-table"><thead><tr><th style="min-width:200px">High · 100 members/site (cap)</th><th>2 Sites</th><th>20 Sites</th><th class="hl">100 Sites</th></tr></thead><tbody><tr class="sec-head"><td colspan="4">Network</td></tr><tr><td class="m">Total members</td><td>200</td><td>2,000</td><td class="good">10,000</td></tr><tr class="sec-head"><td colspan="4">Revenue</td></tr><tr><td class="m">Still Access — 50/site × £199 × 12</td><td>£238,800</td><td>£1,194,000</td><td class="good">£5,970,000</td></tr><tr><td class="m">Still Chrome — 50/site × £499 × 12</td><td>£598,800</td><td>£2,994,000</td><td class="good">£14,970,000</td></tr><tr><td class="m" style="font-weight:500">Total membership</td><td style="font-weight:500">£837,600</td><td style="font-weight:500">£4,188,000</td><td class="good" style="font-weight:600">£20,940,000</td></tr><tr><td class="m">Bar override 10% (200 drinks/day)</td><td>£116,800</td><td>£584,000</td><td class="good">£2,920,000</td></tr><tr><td class="m">Merchandise 70% margin</td><td>£67,200</td><td>£336,000</td><td class="good">£1,680,000</td></tr><tr><td class="m">Events 30% programming fee</td><td>£24,000</td><td>£120,000</td><td class="good">£600,000</td></tr><tr><td class="m">Brand activations</td><td>£48,000</td><td>£480,000</td><td class="good">£2,400,000</td></tr><tr><td class="m">Partner fees (£0 sites 1–2)</td><td style="color:#999;font-size:11px">£0 waived</td><td>£324,000</td><td class="good">£1,764,000</td></tr><tr><td class="m">Technology licensing</td><td style="color:#999">—</td><td>£200,000</td><td class="good">£1,500,000</td></tr><tr style="background:var(--c5)"><td style="font-weight:700;color:var(--c1);padding:10px 16px">Total Revenue</td><td style="font-weight:600;color:var(--c1);padding:10px 16px">£1,093,600</td><td style="font-weight:600;color:var(--c1);padding:10px 16px">£6,232,000</td><td style="font-weight:700;color:var(--c1);padding:10px 16px;font-size:13px">£31,804,000</td></tr><tr class="sec-head"><td colspan="4">Still Central Costs Only</td></tr><tr><td class="m">Ops · Tech · Marketing · Training · G&amp;A</td><td>–£320,000</td><td>–£1,500,000</td><td>–£4,500,000</td></tr><tr class="total-row"><td>Net to Still — High</td><td class="num">£773,600</td><td class="num">£4,732,000</td><td class="green">£27,304,000</td></tr><tr class="margin-row"><td>Net Margin</td><td class="v">71%</td><td class="v">76%</td><td class="v">86%</td></tr></tbody></table></div>
+      <div class="sc-label-bar" style="background:#222"><span style="font-size:8.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.85)">High · 100 members/site · Fully Subscribed · £547k rev/site/yr</span></div>
+      <div class="fin-table-wrap"><table class="fin-table"><thead><tr><th style="min-width:200px">High · 100 members/site (cap)</th><th>2 Sites</th><th>20 Sites</th><th class="hl">100 Sites</th></tr></thead><tbody><tr class="sec-head"><td colspan="4">Network</td></tr><tr><td class="m">Total members</td><td>200</td><td>2,000</td><td class="good">10,000</td></tr><tr class="sec-head"><td colspan="4">Revenue</td></tr><tr><td class="m">Still Access — 50/site × £199 × 12</td><td>£238,800</td><td>£1,194,000</td><td class="good">£5,970,000</td></tr><tr><td class="m">Still Chrome — 50/site × £499 × 12</td><td>£598,800</td><td>£2,994,000</td><td class="good">£14,970,000</td></tr><tr><td class="m" style="font-weight:500">Total membership</td><td style="font-weight:500">£837,600</td><td style="font-weight:500">£4,188,000</td><td class="good" style="font-weight:600">£20,940,000</td></tr><tr><td class="m">Bar override 10% (200 drinks/day)</td><td>£116,800</td><td>£584,000</td><td class="good">£2,920,000</td></tr><tr><td class="m">Merchandise 70% margin</td><td>£67,200</td><td>£336,000</td><td class="good">£1,680,000</td></tr><tr><td class="m">Events 30% programming fee</td><td>£24,000</td><td>£120,000</td><td class="good">£600,000</td></tr><tr><td class="m">Brand activations</td><td>£48,000</td><td>£480,000</td><td class="good">£2,400,000</td></tr><tr><td class="m">Partner fees (£0 sites 1–2)</td><td style="color:#999;font-size:11px">£0 waived</td><td>£324,000</td><td class="good">£1,764,000</td></tr><tr><td class="m">Technology licensing</td><td style="color:#999">—</td><td>£200,000</td><td class="good">£1,500,000</td></tr><tr style="background:#333"><td style="font-weight:700;color:#FFF;padding:10px 16px">Total Revenue</td><td style="font-weight:600;color:#FFF;padding:10px 16px">£1,093,600</td><td style="font-weight:600;color:var(--c1);padding:10px 16px">£6,232,000</td><td style="font-weight:700;color:#FFF;padding:10px 16px;font-size:13px">£31,804,000</td></tr><tr class="sec-head"><td colspan="4">Still Central Costs Only</td></tr><tr><td class="m">Ops · Tech · Marketing · Training · G&amp;A</td><td>–£320,000</td><td>–£1,500,000</td><td>–£4,500,000</td></tr><tr class="total-row"><td>Net to Still — High</td><td class="num">£773,600</td><td class="num">£4,732,000</td><td class="green">£27,304,000</td></tr><tr class="margin-row"><td>Net Margin</td><td class="v">71%</td><td class="v">76%</td><td class="v">86%</td></tr></tbody></table></div>
     </div>
 
     <div class="summary-3">
@@ -1228,7 +1217,7 @@ body.portal-open .site-footer{display:none!important}
       <div class="sum-card m"><div class="sum-lbl">Mid · 75 members · 100 sites</div><div class="sum-num">£19.4M</div><div class="sum-sub">net annual · 84% margin · 7,500 members</div></div>
       <div class="sum-card h"><div class="sum-lbl">High · 100 members · 100 sites</div><div class="sum-num">£27.3M</div><div class="sum-sub">net annual · 86% margin · 10,000 members</div></div>
     </div>
-    <div class="card-w" style="padding:14px 18px;margin-top:3px"><p class="t-small"><strong style="color:var(--c1)">Key assumptions:</strong> 50/50 split · 8 visits/member/month · bar 10% override · merchandise 70% margin · events 30% fee · brand activations · partner fees £0 sites 1–2 then £18k · tech SaaS from 20 sites · <strong style="color:var(--c1)">All site costs (rent, staff, rates, utilities) are entirely the landlord's.</strong></p></div>
+    <div style="background:#0A0A0A;border:1px solid #222;padding:14px 18px;margin-top:3px"><p style="font-size:12px;line-height:1.75;color:#BBB"><strong style="color:#FFF">Key assumptions:</strong> 50/50 split · 8 visits/member/month · bar 10% override · merchandise 70% margin · events 30% fee · brand activations · partner fees £0 sites 1–2 then £18k · tech SaaS from 20 sites · <strong style="color:#FFF">All site costs (rent, staff, rates, utilities) are entirely the landlord's.</strong></p></div>
   </div>
 
   <div class="inv-targets-section">

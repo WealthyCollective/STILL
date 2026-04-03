@@ -50,7 +50,7 @@ button,input,select,textarea{font-family:inherit}
 .inv .t-label{color:rgba(255,255,255,.30)}
 
 /* ─── LAYOUT ─── */
-.page{display:none;padding-top:54px;padding-bottom:68px} /* bottom for mob-bar */
+.page{display:none;padding-top:54px;padding-bottom:0}
 .page.active{display:block}
 .section{padding:60px 48px}
 .section-sm{padding:40px 48px}
@@ -94,7 +94,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:54px;background:rgba(
 .mob-btn-ir{border-left:1px solid #222}
 
 /* ─── MOBILE BOTTOM BAR ─── */
-.mob-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;height:64px;background:rgba(10,10,10,.97);backdrop-filter:blur(16px);border-top:1px solid #222}
+.mob-bar{display:none !important}
+
+/* ─── FLOATING IR BUTTON ─── */
+.ir-float{position:fixed;bottom:32px;right:32px;z-index:300;width:52px;height:52px;border-radius:50%;background:#0A0A0A;border:1px solid #333;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 24px rgba(0,0,0,.4);transition:background .2s,transform .2s;text-decoration:none}
+.ir-float:hover{background:#222;transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.ir-float span{font-size:8px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#FFF;user-select:none}
 .mob-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;border:none;background:transparent;font-size:7.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#999;padding:8px 4px;transition:background .15s,color .15s;user-select:none}
 .mob-btn.active{color:#FFF;background:rgba(255,255,255,.10)}
 .mob-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
@@ -1128,6 +1133,11 @@ body.portal-open .site-footer{display:none!important}
 </footer>
 
 <!-- INVESTOR LOGIN MODAL -->
+<!-- FLOATING IR BUTTON -->
+<button class="ir-float" onclick="openInvestorLogin()" aria-label="Investor Relations">
+  <span>IR</span>
+</button>
+
 <div class="inv-overlay" id="invOverlay" onclick="if(event.target===this)closeInvestorLogin()">
   <div class="inv-modal">
     <div class="inv-modal-head"><div class="inv-modal-lbl">Still — Investor Relations</div><div class="inv-modal-title">Restricted Access</div></div>
